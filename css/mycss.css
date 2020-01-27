@@ -1,0 +1,60 @@
+
+
+p.textsup {
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: 
+		-0   -4px 0   #29C6BF,
+		 0   -4px 0   #29C6BF,
+		-0    4px 0   #29C6BF,
+		 0    4px 0   #29C6BF,
+		-4px -0   0   #29C6BF,
+		 4px -0   0   #29C6BF,
+		-4px  0   0   #29C6BF,
+		 4px  0   0   #29C6BF,
+		-1px -4px 0   #29C6BF,
+		 1px -4px 0   #29C6BF,
+		-1px  4px 0   #29C6BF,
+		 1px  4px 0   #29C6BF,
+		-4px -1px 0   #29C6BF,
+		 4px -1px 0   #29C6BF,
+		-4px  1px 0   #29C6BF,
+		 4px  1px 0   #29C6BF,
+		-2px -4px 0   #29C6BF,
+		 2px -4px 0   #29C6BF,
+		-2px  4px 0   #29C6BF,
+		 2px  4px 0   #29C6BF,
+		-4px -2px 0   #29C6BF,
+		 4px -2px 0   #29C6BF,
+		-4px  2px 0   #29C6BF,
+		 4px  2px 0   #29C6BF,
+		-3px -4px 0   #29C6BF,
+		 3px -4px 0   #29C6BF,
+		-3px  4px 0   #29C6BF,
+		 3px  4px 0   #29C6BF,
+		-4px -3px 0   #29C6BF,
+		 4px -3px 0   #29C6BF,
+		-4px  3px 0   #29C6BF,
+		 4px  3px 0   #29C6BF,
+		-4px -4px 0   #29C6BF,
+		 4px -4px 0   #29C6BF,
+		-4px  4px 0   #29C6BF,
+		 4px  4px 0   #29C6BF,
+		-4px -4px 0   #29C6BF,
+		 4px -4px 0   #29C6BF,
+		-4px  4px 0   #29C6BF,
+		 4px  4px 0   #29C6BF;
+}
+
+div.sidebar {
+  
+  height: 80vh;
+}
+
+p.head {
+	font-size: 25px;
+	color: #007bff;
+}
+
