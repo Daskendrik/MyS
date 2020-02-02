@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        font: 16px/24px Arial;
+        background: gray;
+        height: 200px;
+    }
+    
+    .adaptive_item {
+        background: red;
+    }
+    
+    .adaptive_box {
+        margin-left: -8.33333333%;
+    }
+    
+    @media (max-width: 767px) {
+        .adaptive_box {
+            margin-left: 0;
+        }
+    }
+</style>
+ 
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="box"></div>
+            </div>
+            <div class="col-sm-7 adaptive_box">
+                <div class="box adaptive_item"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+</html>
