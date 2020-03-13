@@ -5,6 +5,21 @@
 	<title>SQL.Начало</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    												<!--скрипт определения метонахождения-->
+    <script type="text/javascript">$(function () {  
+    $('.menu a').each(function () { 
+        var location = window.location.href; 
+        var link = this.href;  
+        if(location == link) { 
+            $(this).addClass('mainmenu_a');
+            $(this).addClass('col');
+            $(this).removeClass('mainmenu_n');
+            $(this).removeClass('col-lg-6');
+        }
+        });
+    });
+    </script>
 </head>
 <body style=" background: #FFEB73">
 	<div class="container" > 
@@ -28,35 +43,27 @@
 		<div class="row " style="min-height: 750px ">
 
 																					<!--Меню -загладка -->
-			<div class="col col-lg-1 " style=" ">
-				<a href="sql_start.html">
+			<div class="col col-lg-1 menu" style=" ">
 					<div class="row justify-content-end" style="height: 150px; ">
-						<div class="col mainmenu_a">
+						<a class="col-lg-6 mainmenu_n rounded-left" href="sql_start.html">
 								<div class="mainmenutext">Введение</div>
-						</div>
+						</a>
 					</div>
-				</a>
-				<a href="sql_base.html">
 					<div class="row justify-content-end" style="height: 150px ">
-						<div class="col-lg-6 mainmenu_n" >
+						<a class="col-lg-6 mainmenu_n rounded-left" href="sql_base.html" >
 							<div class="mainmenutext">Основы</div>
-						</div>
+						</a>
 					</div>
-				</a>
-				<a href="sql_1_table.html">
 					<div class="row justify-content-end" style="height: 150px ">
-						<div class="col-lg-6 mainmenu_n">
+						<a class="col-lg-6 mainmenu_n rounded-left" href="sql_1_table.html">
 							<div class="mainmenutext">1 таблица</div>
-						</div>
+						</a>
 					</div>
-				</a>
-				<a href="sql_2_tables.html">
 					<div class="row justify-content-end" style="height: 150px ">
-						<div class="col-lg-6 mainmenu_n">
+						<a class="col-lg-6 mainmenu_n rounded-left" href="sql_2_tables.html">
 							<div class="mainmenutext">2 таблицы</div>
-						</div>
+						</a>
 					</div>
-				</a>
 			</div>
 																					<!--Меню -загладка -->
 	
@@ -73,13 +80,17 @@
 									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
 									<img id="block" src="img/arrow-bar-right.svg" alt="" style="width: 100%; display: none;" onclick="(document.getElementById('sec_menu').style.display='block', document.getElementById('hide').style.display='block', document.getElementById('block').style.display='none' )"></img>
 							</div>
+
+																													<!--Начало главного блока-->
 					<div class="col" style="background: #FAEEDD; ">
 					<p style="text-indent: 20px; ">Довольно долго я работаю с этим «языком запросов». Используется он для работы с баз данных, построенных на таблицах. Довольно легко и просто работать с ним. 
 					<p style="text-align: center;"> Немного информации, которую нужно запомнить и рассмотреть еще разок!
 						<br style="text-align: center;">•	После каждого создания/внесения/запроса необходимо ставить «;»
 						<br style="text-align: center;">•	Null – значит значения нет (это не «»)
 					</p>
+
 					</p>
+					
 					</div>
 				</div>
 			</div>

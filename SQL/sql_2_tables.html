@@ -5,7 +5,21 @@
 	<title>SQL.Начало</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css"> 
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    												<!--скрипт определения метонахождения-->
+    <script type="text/javascript">$(function () {  
+    $('.menu a').each(function () { 
+        var location = window.location.href; 
+        var link = this.href;  
+        if(location == link) { 
+            $(this).addClass('mainmenu_a');
+            $(this).addClass('col');
+            $(this).removeClass('mainmenu_n');
+            $(this).removeClass('col-lg-6');
+        }
+        });
+    });
+    </script>
 </head>
 <body style=" background: #FFEB73">
 	<div class="container" > 
@@ -29,35 +43,27 @@
 		<div class="row " style="min-height: 750px ">
 
 																					<!--Меню -загладка -->
-			<div class="col col-lg-1 " style=" ">
-				<a href="sql_start.html">
+			<div class="col col-lg-1 menu" style=" ">
 					<div class="row justify-content-end" style="height: 150px; ">
-						<div class="col-lg-6  mainmenu_n">
+						<a class="col-lg-6 mainmenu_n rounded-left" href="sql_start.html">
 								<div class="mainmenutext">Введение</div>
-						</div>
+						</a>
 					</div>
-				</a>
-				<a href="sql_base.html">
 					<div class="row justify-content-end" style="height: 150px ">
-						<div class="col-lg-6 mainmenu_n" >
+						<a class="col-lg-6 mainmenu_n rounded-left" href="sql_base.html" >
 							<div class="mainmenutext">Основы</div>
-						</div>
+						</a>
 					</div>
-				</a>
-				<a href="sql_1_table.html">
 					<div class="row justify-content-end" style="height: 150px ">
-						<div class="col-lg-6 mainmenu_n" >
+						<a class="col-lg-6 mainmenu_n rounded-left" href="sql_1_table.html">
 							<div class="mainmenutext">1 таблица</div>
-						</div>
+						</a>
 					</div>
-				</a>
-				<a href="sql_2_tables.html">
 					<div class="row justify-content-end" style="height: 150px ">
-						<div class="col mainmenu_a">
+						<a class="col-lg-6 mainmenu_n rounded-left" href="sql_2_tables.html">
 							<div class="mainmenutext">2 таблицы</div>
-						</div>
+						</a>
 					</div>
-				</a>
 			</div>
 																					<!--Меню -загладка -->
 	
