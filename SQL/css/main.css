@@ -1,0 +1,38 @@
+.mainmenu_n{
+	background: #FFDC73;  
+	margin: 3% 0% 3% 3%;
+	border: 1px solid;
+}
+
+.mainmenu_a{
+	background: #FFCF40;
+	margin: 3% 0% 3% 3%;
+	border-top: 1px solid; 
+	border-left: 1px solid; 
+	border-bottom: 1px solid 
+}
+
+.mainmenutext {
+	white-space: nowrap; 
+	position: absolute; 
+	top: 50%;
+	left: 50%;  
+	transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+.sqlcode {
+	background: white;
+	width: 100%;
+	color: black;
+	font-size: 18px;
+	line-height: 1em;
+}
+.tag {
+	color: red;
+	font-weight: bold;
+}
+
+.nextflore {
+	text-indent: 30px;
+
+}

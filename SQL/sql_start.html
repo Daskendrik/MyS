@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>SQL.Начало</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+</head>
+<body style=" background: #FFEB73">
+	<div class="container" > 
+			<div class="row" style="background: #FFBF00; border: solid;">
+				<div class="col col-12">
+				<h1 style="text-align: center;">Краткий справочник SQL</h3>
+				<p style="text-align: right;">Языки/SQL/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				<p style="text-align: center;">Немного об этом разделе. Он сделан без большого количества JS, так как это первый раздел. В дальнейешм это будет поправляться. Но пока что, меню, например, будет сделано вручную</p>
+				</div>
+			</div>
+
+			<div class="row" style="background: #FFBF00; border-bottom: dotted; border-right: dotted; border-left: dotted">
+				<div class = "col col-12" style="text-align: center; margin: 1% ">
+					<button class="btn btn-dark" style="width: 190px">Распечатать</button>
+					<button class="btn btn-dark" style="width: 190px">Сохранить</button>
+					<button class="btn btn-dark" style="width: 190px">Отправить на почту</button>
+					<button class="btn btn-dark" style="width: 190px">И другой функционал</button>
+				</div>
+			</div>
+
+		<div class="row " style="min-height: 750px ">
+
+																					<!--Меню -загладка -->
+			<div class="col col-lg-1 " style=" ">
+				<a href="sql_start.html">
+					<div class="row justify-content-end" style="height: 150px; ">
+						<div class="col mainmenu_a">
+								<div class="mainmenutext">Введение</div>
+						</div>
+					</div>
+				</a>
+				<a href="sql_base.html">
+					<div class="row justify-content-end" style="height: 150px ">
+						<div class="col-lg-6 mainmenu_n" >
+							<div class="mainmenutext">Основы</div>
+						</div>
+					</div>
+				</a>
+				<a href="sql_1_table.html">
+					<div class="row justify-content-end" style="height: 150px ">
+						<div class="col-lg-6 mainmenu_n">
+							<div class="mainmenutext">1 таблица</div>
+						</div>
+					</div>
+				</a>
+				<a href="sql_2_tables.html">
+					<div class="row justify-content-end" style="height: 150px ">
+						<div class="col-lg-6 mainmenu_n">
+							<div class="mainmenutext">2 таблицы</div>
+						</div>
+					</div>
+				</a>
+			</div>
+																					<!--Меню -загладка -->
+	
+
+			<div class="col col-lg-11" >
+				<div class="row" style="height: 100%; border: ridge;">
+							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid" >
+								<p style="text-align: center;">Структура раздела</p>
+								<p>Якорь 1</p>
+								<p>Якорь 2</p>
+								<p>Якорь 2</p>
+							</div>
+							<div  style="background: #FAEEDD;; width: 35px;  position: relative; display: inline-block;">
+									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
+									<img id="block" src="img/arrow-bar-right.svg" alt="" style="width: 100%; display: none;" onclick="(document.getElementById('sec_menu').style.display='block', document.getElementById('hide').style.display='block', document.getElementById('block').style.display='none' )"></img>
+							</div>
+					<div class="col" style="background: #FAEEDD; ">
+					<p style="text-indent: 20px; ">Довольно долго я работаю с этим «языком запросов». Используется он для работы с баз данных, построенных на таблицах. Довольно легко и просто работать с ним. 
+					<p style="text-align: center;"> Немного информации, которую нужно запомнить и рассмотреть еще разок!
+						<br style="text-align: center;">•	После каждого создания/внесения/запроса необходимо ставить «;»
+						<br style="text-align: center;">•	Null – значит значения нет (это не «»)
+					</p>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class = "col-12" style="background: #FFBF00; border: dotted;">
+			<p style="text-align: center;">ЭТО ДНИЩЕ САЙТА </p>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
