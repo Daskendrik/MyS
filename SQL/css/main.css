@@ -24,8 +24,12 @@
 	background: white;
 	width: 100%;
 	color: black;
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1em;
+	font-family:comic sans ms,cursive
+}
+.sqlcode p {
+	margin: 1px;
 }
 .tag {
 	color: blue;
@@ -42,7 +46,14 @@
 	font-size: 16px; 
 	font-family:tahoma,geneva,sans-serif;
 }
+.maintext p {
+}
 .maintext a {
 	font-size:18px;
 	font-weight: bold;
+}
+
+.maintext table {
+	background: white;
+	text-align: center;
 }

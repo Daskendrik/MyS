@@ -26,8 +26,8 @@
 			<div class="row" style="background: #FFBF00; border: solid;">
 				<div class="col col-12">
 				<h1 style="text-align: center;">Краткий справочник SQL</h3>
-				<p style="text-align: right;">Языки/SQL/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
-				<p style="text-align: center;">Немного об этом разделе. Он сделан без большого количества JS, так как это первый раздел. В дальнейешм это будет поправляться. Но пока что, меню, например, будет сделано вручную</p>
+				<p style="text-align: right;">Языки/SQL/Работа с 1 таблицей</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				<p style="text-align: center;">Немного об этом разделе. Он сделан без большого количества JS, так как это первый раздел. В дальнейешм это будет поправляться.</p>
 				</div>
 			</div>
 
@@ -70,23 +70,1920 @@
 
 			<div class="col col-lg-11" >
 				<div class="row" style="height: 100%; border: ridge;">
-							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid" >
-								<p style="text-align: center;">Структура раздела</p>
-								<p>Якорь 1</p>
-								<p>Якорь 2</p>
-								<p>Якорь 2</p>
+							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid; " >
+								<p style="text-align: center;color: blue; font-size: 18px ">Структура раздела</p>
+								<p><a style="color: blue" href="#Первый запрос">Первый запрос</a></p>
+								<p><a style="color: blue" href="#Выбор строк/Операторы">Выбор строк/Операторы</a></p>
+								<p><a style="color: blue" href="#Сортировка">Сортировка</a></p>
+								<p><a style="color: blue" href="#Минимум/маскимум/сумма">Минимум/маскимум/сумма</a></p>
 							</div>
 							<div  style="background: #FAEEDD;; width: 35px;  position: relative; display: inline-block;">
 									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
 									<img id="block" src="img/arrow-bar-right.svg" alt="" style="width: 100%; display: none;" onclick="(document.getElementById('sec_menu').style.display='block', document.getElementById('hide').style.display='block', document.getElementById('block').style.display='none' )"></img>
 							</div>
-					<div class="col" style="background: #FAEEDD; ">
-					<p>Якорь 1. <br>Текст Текст Текст Текст Текст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст Текст
-					</p>
-					<p>Якорь 2. <br>Текст Текст Текст Текст Текст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст Текст
-					</p>
-					<p>Якорь 3. <br>Текст Текст Текст Текст Текст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст ТекстТекст Текст Текст Текст
-					</p>
+					<div class="col maintext" style="background: #FAEEDD; ">
+						<p><a id="Первый запрос" name="Первый запрос">Первый запрос</a></p>
+
+						<p>Практически все запросы начинаются с Select. То есть, можно сказать, Выбираю. Самый простой запрос будет выглядеть так:</p>
+
+						<p><span style="color:#0000FF"><strong>Select</strong></span> * <strong><span style="color:#0000FF">from</span></strong> Telephone&nbsp; -- дословно Выбрать все из таблицы Telephone (* = все)</p>
+
+						<p>Или</p>
+
+						<p><strong><span style="color:#0000FF">Select</span></strong> Telephone .* <strong><span style="color:#0000FF">from</span></strong> Telephone&nbsp;</p>
+
+						<p>Или</p>
+
+						<p><span style="color:#0000FF"><strong>Select</strong> </span>a.* <strong><span style="color:#0000FF">from</span></strong> Telephone&nbsp; a</p>
+
+						<p>Первый вариант подходит для самых простых запросов, но дальше такой способ может не сработать и запутать. Второй вариант содержит много символов, не то, чтобы это плохо, но лучше использовать третий вариант. Таблицу мы как бы переименовываем на <span style="color:#FF0000">а</span> для упрощения запроса. Лучше приучаться писать сразу третьим вариантом. Плюс ко всему, запросы можно делать более красиво, не в 1 строчку. Руками красоту конечно делать не стоит, обычно такой функционал есть в программе, в который вы пишите запросы&nbsp;</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><strong><span style="color:#0000FF">select</span></strong> a.*</p>
+
+						<p style="margin-left:40px"><strong><span style="color:#0000FF">from</span></strong> Telephone a</p>
+						</div>
+						<hr />
+						<p>Нам будет показана вся таблица, без каких либо сортировок и тд и тп.</p>
+
+						<p><strong>Выбор столбца</strong></p>
+
+						<p>Чтобы выбрать определенный столбец, необходимо вместо * писать название столбца:</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select </strong></span>a.LastName&nbsp;<strong><span style="color:#0000FF"> from</span></strong> Telephone a -- Выбрать столбец LastName из таблицы Telephone</p>
+						</div>
+
+						<hr />
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>Если нам нужно несколько столбцов, то перечислим их через запятую.</p>
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.LastName, a.Telephone&nbsp;<strong><span style="color:#0000FF"> from</span></strong> Telephone&nbsp; a</p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">123456</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">234567</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">345678</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">456789</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">567890</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>Так же столбца можно переименовывать <strong>только для отображения</strong>.</p>
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.LastName <span style="color:#0000FF"><strong>as</strong></span> Фамилия, a.Telephone <span style="color:#0000FF"><strong>as</strong></span> Телефон&nbsp; <strong><span style="color:#0000FF">from</span></strong> Telephone&nbsp; a</p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>Фамилия</strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Телефон</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">123456</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">234567</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">345678</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">456789</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">567890</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p>Иногда нам нужны отдельные колонки, но и остальные тоже, для этого можно делать так</p>
+						<table border="1" cellpadding="0" cellspacing="0" style="width:80%">
+							<tbody>
+								<tr>
+									<td style="width:89px">
+									<p style="text-align: center;"><strong>Фамилия</strong></p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;"><strong>Телефон</strong></p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:54px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:104px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;"><strong>Отчество</strong></p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:75px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:89px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">123456</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:54px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:104px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">&nbsp;</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">123456</p>
+									</td>
+									<td style="width:75px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:89px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">234567</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:54px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:104px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">Иванович</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">234567</p>
+									</td>
+									<td style="width:75px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">N2</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:89px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">3</p>
+									</td>
+									<td style="width:54px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:104px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">Ивана</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">Ивановна</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td style="width:75px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:89px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">456789</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">4</p>
+									</td>
+									<td style="width:54px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:104px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">Анастасия</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">Сергеевна</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">456789</p>
+									</td>
+									<td style="width:75px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">S1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:89px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">567890</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">5</p>
+									</td>
+									<td style="width:54px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:104px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td style="width:83px">
+									<p style="text-align: center;">Дмитрий</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">Сергеевич</p>
+									</td>
+									<td style="width:79px">
+									<p style="text-align: center;">567890</p>
+									</td>
+									<td style="width:75px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:76px">
+									<p style="text-align: center;">S2</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.LastName <strong><span style="color:#0000FF">as</span></strong> Фамилия, a.Telephone <span style="color:#0000FF"><strong>as</strong></span> Телефон, a.*&nbsp; from&nbsp; Telephone&nbsp; a</p>
+						</div>
+						<hr />
+						<p>Заметьте, что при этом первые 2 столбца повторяться потом вместе с остальными.</p>
+
+						<h2><a id="Выбор строк/Операторы" name="Выбор строк/Операторы">Выбор строк/Операторы</a></h2>
+
+						<p>Теперь будем выбирать строчки, для этого появляется слово where = где</p>
+
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#0000FF">Select</span> a.* from Telephone a <strong><span style="color:#0000FF">where</span> &lsquo;</strong><strong>имя</strong><strong> столбца</strong><strong>&rsquo; <span style="color:#0000FF">&lsquo;оператор</span></strong><strong><span style="color:#0000FF">&rsquo;</span>&nbsp; &lsquo;значение</strong><strong>&rsquo;</strong></p>
+
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Операторы</p>
+
+						<table border="1" cellpadding="0" cellspacing="0" style="text-align: center;">
+							<tbody>
+								<tr>
+									<td style="width:319px">
+									<p>Что пишем в запросе</p>
+									</td>
+									<td style="width:319px">
+									<p>Что подразумевается</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>=</p>
+									</td>
+									<td style="width:319px">
+									<p>Равно</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>&gt;&nbsp;</p>
+									</td>
+									<td style="width:319px">
+									<p>больше</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>&lt;&nbsp;</p>
+									</td>
+									<td style="width:319px">
+									<p>Меньше</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>&gt;=</p>
+									</td>
+									<td style="width:319px">
+									<p>Больше или равно</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>&lt;=</p>
+									</td>
+									<td style="width:319px">
+									<p>Меньше или равно</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>!=</p>
+									</td>
+									<td style="width:319px">
+									<p>Не равно</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>Is not null</p>
+									</td>
+									<td style="width:319px">
+									<p>Заполнены</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>Is null</p>
+									</td>
+									<td style="width:319px">
+									<p>Не заполнены</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>Between</p>
+									</td>
+									<td style="width:319px">
+									<p>между</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>In</p>
+									</td>
+									<td style="width:319px">
+									<p>Значения, содержащие</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>Not in</p>
+									</td>
+									<td style="width:319px">
+									<p>&nbsp;Не содержащие</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>Like</p>
+									</td>
+									<td style="width:319px">
+									<p>Соответствующие образцу</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>Not like</p>
+									</td>
+									<td style="width:319px">
+									<p>Не соответствующие образцу</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>Например, выбрать все столбцы из таблицы телефоны где марка Нокиа</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.* <strong><span style="color:#0000FF">from</span></strong> Telephone a <strong><span style="color:#0000FF">where</span></strong> a.Mark = &#39;Nokia&#39;</p>
+						</div>
+
+						<hr />
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">&nbsp;</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">123456</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Иванович</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">234567</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N2</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">3</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Ивана</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Ивановна</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>Если нам нужно несколько условий, то соединяем их словом <strong>and</strong></p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.* <strong><span style="color:#0000FF">from</span></strong> Telephone a <strong><span style="color:#0000FF">where</span></strong> a.Mark = &#39;Nokia &#39; <strong><span style="color:#0000FF">and</span></strong> a.Model = &#39;N1&#39;</p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">&nbsp;</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">123456</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">3</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Ивана</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Ивановна</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p><strong><span style="color:#0000FF">in</span></strong></p>
+
+						<p>Если нужны записи по 1 параметру, но разными значениям</p>
+
+						<p>Выбрать все столбцы из таблицы телефоны где имя Вася или Дмитрий</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.* <strong><span style="color:#0000FF">from</span></strong> Telephone a <span style="color:#0000FF"><strong>where</strong></span> a.First_name <strong><span style="color:#0000FF">in</span></strong> (&#39;Вася&#39;, &#39;Дмитрий&#39;)</p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">&nbsp;</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">123456</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Иванович</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">234567</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N2</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">5</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Дмитрий</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Сергеевич</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">567890</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">S2</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p><span style="color:#0000FF"><strong>Not in</strong></span></p>
+
+						<p>Выбрать все столбцы из таблицы телефоны где имя не Вася или Дмитрий</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.* <strong><span style="color:#0000FF">from</span></strong> Telephone a <span style="color:#0000FF"><strong>where</strong></span> a.First_name <strong><span style="color:#0000FF">NOT IN</span></strong> (&#39;Вася&#39;, &#39;Дмитрий&#39;)</p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">3</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Ивана</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Ивановна</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">4</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Анастасия</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Сергеевна</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">456789</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">S1</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p><strong><span style="color:#0000FF">Is not null</span></strong></p>
+
+						<p>Выбрать все столбцы из таблицы телефоны где отчество заполнено</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p>&nbsp; <span style="color:#0000FF"><strong>Select </strong></span>a.* <strong><span style="color:#0000FF">from</span></strong> Telephone a <strong><span style="color:#0000FF">where </span></strong>a.Middle_Name <strong><span style="color:#0000FF">is not null</span></strong></p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Иванович</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">234567</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N2</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">3</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Ивана</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Ивановна</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">4</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Анастасия</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Сергеевна</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">456789</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">S1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">5</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Дмитрий</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Сергеевич</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">567890</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">S2</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p><strong><span style="color:#0000FF">Is null</span></strong></p>
+
+						<p>Выбрать все столбцы из таблицы телефоны где отчество не заполнено</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.* <strong><span style="color:#0000FF">from</span></strong> Telephone a where a.Middle_Name <strong><span style="color:#0000FF">is null&nbsp; </span></strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">null</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">123456</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p><span style="color:#0000FF"><strong>!=</strong></span></p>
+
+						<p>Выбрать все столбцы, где отчество не Иванович</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p>Select a.* from Telephone a where a.Middle_Name != &#39;Иванович&#39;</p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;"><strong>LastName </strong></p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">3</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Ивана</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Ивановна</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">4</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Анастасия</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Сергеевна</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">456789</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">S1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:65px">
+									<p style="text-align: center;">5</p>
+									</td>
+									<td style="width:59px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:90px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td style="width:87px">
+									<p style="text-align: center;">Дмитрий</p>
+									</td>
+									<td style="width:99px">
+									<p style="text-align: center;">Сергеевич</p>
+									</td>
+									<td style="width:84px">
+									<p style="text-align: center;">567890</p>
+									</td>
+									<td style="width:72px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:78px">
+									<p style="text-align: center;">S2</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h2><a id="Сортировка" name="Сортировка">Сортировка</a></h2>
+
+						<p>Выражения для сортировки необходимо писать после выражения where(если таковое есть). Для сортировки используется <span style="color:#0000FF"><strong>order by</strong></span></p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.* <strong><span style="color:#0000FF">from</span></strong> telephone a <span style="color:#0000FF"><strong>order by</strong></span> a.Model</p>
+						</div>
+
+						<table border="1" cellpadding="0" cellspacing="0" style="width:533px">
+							<tbody>
+								<tr>
+									<td style="width:180px">
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;"><strong>LastName</strong></p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:180px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">(null)</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">123456</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:180px">
+									<p style="text-align: center;">3</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Ивана</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Ивановна</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:180px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">1</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Иванович</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">234567</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">N2</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:180px">
+									<p style="text-align: center;">4</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Анастасия</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Сергеевна</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">456789</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">S1</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:180px">
+									<p style="text-align: center;">5</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">2</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Дмитрий</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Сергеевич</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">567890</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td style="width:180px">
+									<p style="text-align: center;">S2</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>Тут мы сортируем от 0 и до бесконечности, A&hellip;Z и тд.</p>
+
+						<p>Чтобы сортировать в обратном порядке в конце необходимо прописать <span style="color:#0000FF"><strong>desc</strong></span></p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.* <span style="color:#0000FF"><strong>from</strong></span> telephone a <span style="color:#0000FF"><strong>order by</strong></span> a.Model <span style="color:#0000FF"><strong>desc</strong></span></p>
+						</div>
+
+						<hr />
+						<p>&nbsp;</p>
+
+						<table border="1" cellpadding="0" cellspacing="0" style="width:533px">
+							<tbody>
+								<tr>
+									<td>
+									<p style="text-align: center;"><strong>Row_id</strong></p>
+									</td>
+									<td>
+									<p style="text-align: center;"><strong>Family</strong></p>
+									</td>
+									<td>
+									<p style="text-align: center;"><strong>LastName</strong></p>
+									</td>
+									<td>
+									<p style="text-align: center;"><strong>First_name</strong></p>
+									</td>
+									<td>
+									<p style="text-align: center;"><strong>Middle_name</strong></p>
+									</td>
+									<td>
+									<p style="text-align: center;"><strong>Telephone</strong></p>
+									</td>
+									<td>
+									<p style="text-align: center;"><strong>Mark</strong></p>
+									</td>
+									<td>
+									<p style="text-align: center;"><strong>Model</strong></p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p style="text-align: center;">5</p>
+									</td>
+									<td>
+									<p style="text-align: center;">2</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Кукушкин</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Дмитрий</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Сергеевич</p>
+									</td>
+									<td>
+									<p style="text-align: center;">567890</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td>
+									<p style="text-align: center;">S2</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p style="text-align: center;">4</p>
+									</td>
+									<td>
+									<p style="text-align: center;">2</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Кукушкина</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Анастасия</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Сергеевна</p>
+									</td>
+									<td>
+									<p style="text-align: center;">456789</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Sony</p>
+									</td>
+									<td>
+									<p style="text-align: center;">S1</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p style="text-align: center;">2</p>
+									</td>
+									<td>
+									<p style="text-align: center;">1</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Иванович</p>
+									</td>
+									<td>
+									<p style="text-align: center;">234567</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td>
+									<p style="text-align: center;">N2</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p style="text-align: center;">1</p>
+									</td>
+									<td>
+									<p style="text-align: center;">1</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Иванов</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Вася</p>
+									</td>
+									<td>
+									<p style="text-align: center;">(null)</p>
+									</td>
+									<td>
+									<p style="text-align: center;">123456</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td>
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p style="text-align: center;">3</p>
+									</td>
+									<td>
+									<p style="text-align: center;">1</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Иванова</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Ивана</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Ивановна</p>
+									</td>
+									<td>
+									<p style="text-align: center;">345678</p>
+									</td>
+									<td>
+									<p style="text-align: center;">Nokia</p>
+									</td>
+									<td>
+									<p style="text-align: center;">N1</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>Если необходимо сортировать по нескольким столбцам, то ее порядок будет таким, каким и зададим.</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select</strong></span> a.* <strong><span style="color:#0000FF">from</span></strong> telephone a <strong><span style="color:#0000FF">order by</span></strong> a.Family, a.Model <strong><span style="color:#0000FF">desc</span></strong></p>
+						</div>
+
+						<hr />
+						<table border="1" cellpadding="0" cellspacing="0" style="width:533px">
+							<tbody>
+								<tr>
+									<td>
+									<p>Row_id</p>
+									</td>
+									<td>
+									<p>Family</p>
+									</td>
+									<td>
+									<p>LastName</p>
+									</td>
+									<td>
+									<p>First_name</p>
+									</td>
+									<td>
+									<p>Middle_name</p>
+									</td>
+									<td>
+									<p>Telephone</p>
+									</td>
+									<td>
+									<p>Mark</p>
+									</td>
+									<td>
+									<p>Model</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p>2</p>
+									</td>
+									<td>
+									<p>1</p>
+									</td>
+									<td>
+									<p>Иванов</p>
+									</td>
+									<td>
+									<p>Вася</p>
+									</td>
+									<td>
+									<p>Иванович</p>
+									</td>
+									<td>
+									<p>234567</p>
+									</td>
+									<td>
+									<p>Nokia</p>
+									</td>
+									<td>
+									<p>N2</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p>1</p>
+									</td>
+									<td>
+									<p>1</p>
+									</td>
+									<td>
+									<p>Иванов</p>
+									</td>
+									<td>
+									<p>Вася</p>
+									</td>
+									<td>
+									<p>(null)</p>
+									</td>
+									<td>
+									<p>123456</p>
+									</td>
+									<td>
+									<p>Nokia</p>
+									</td>
+									<td>
+									<p>N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p>3</p>
+									</td>
+									<td>
+									<p>1</p>
+									</td>
+									<td>
+									<p>Иванова</p>
+									</td>
+									<td>
+									<p>Ивана</p>
+									</td>
+									<td>
+									<p>Ивановна</p>
+									</td>
+									<td>
+									<p>345678</p>
+									</td>
+									<td>
+									<p>Nokia</p>
+									</td>
+									<td>
+									<p>N1</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p>5</p>
+									</td>
+									<td>
+									<p>2</p>
+									</td>
+									<td>
+									<p>Кукушкин</p>
+									</td>
+									<td>
+									<p>Дмитрий</p>
+									</td>
+									<td>
+									<p>Сергеевич</p>
+									</td>
+									<td>
+									<p>567890</p>
+									</td>
+									<td>
+									<p>Sony</p>
+									</td>
+									<td>
+									<p>S2</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p>4</p>
+									</td>
+									<td>
+									<p>2</p>
+									</td>
+									<td>
+									<p>Кукушкина</p>
+									</td>
+									<td>
+									<p>Анастасия</p>
+									</td>
+									<td>
+									<p>Сергеевна</p>
+									</td>
+									<td>
+									<p>456789</p>
+									</td>
+									<td>
+									<p>Sony</p>
+									</td>
+									<td>
+									<p>S1</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>&nbsp;Как видим, сначала сортировка была по семье, затем, не нарушая эту сортировку была сортировка по моделям.</p>
+
+						<h2><a id="Минимум/маскимум/сумма" name="Минимум/маскимум/сумма">Минимум/маскимум/сумма</a></h2>
+
+						<table border="1" cellpadding="0" cellspacing="0" style="text-align: center;">
+							<tbody>
+								<tr>
+									<td style="width:319px">
+									<p>Что в запросе</p>
+									</td>
+									<td style="width:319px">
+									<p>Что получим</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>SUM</p>
+									</td>
+									<td style="width:319px">
+									<p>сумма</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>MIN</p>
+									</td>
+									<td style="width:319px">
+									<p>Минимум</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>MAX</p>
+									</td>
+									<td style="width:319px">
+									<p>Максимум</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>AVG</p>
+									</td>
+									<td style="width:319px">
+									<p>Среднее значение</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="width:319px">
+									<p>COUNT</p>
+									</td>
+									<td style="width:319px">
+									<p>Возвращает количество записей в таблице</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>&nbsp;Например, посчитаем, сколько у нас записей в таблице</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><strong><span style="color:#0000FF">Select COUNT(*) from</span></strong> Telephone</p>
+						</div>
+
+						<hr />
+						<table border="1" cellpadding="0" style="width:533px; text-align: center;">
+							<tbody>
+								<tr>
+									<td>
+									<p>COUNT(*)</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p>5</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p>Чтобы посчитать сколько записей, где отчество заполнено</p>
+
+						<hr />
+						<div class="sqlcode">
+						<p><span style="color:#0000FF"><strong>Select COUNT</strong></span>(Middle_name) <strong><span style="color:#0000FF">from</span></strong> Telephone</p>
+						</div>
+
+						<hr />
+						<table border="1" cellpadding="0" cellspacing="0" style="text-align: center; width:533px">
+							<tbody>
+								<tr>
+									<td>
+									<p>COUNT(Middle_name)</p>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									<p>4</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p></p>
 					</div>
 				</div>
 			</div>
