@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>JS.Начало</title>
+	<title>JS.Примеры</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css"> 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
@@ -28,7 +28,7 @@
 			<div class="row" style="background: #FFBF00; border: solid;">
 				<div class="col col-12">
 				<h1 style="text-align: center;">Краткий справочник JS</h3>
-				<p style="text-align: right;">Языки/JS/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				<p style="text-align: right;">Языки/JS/Примеры</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
 				</div>
 			</div>
 																					<!--верхние кнопки -->
@@ -118,7 +118,7 @@
 						</p>
 						<hr> <!--Урок 3-->
 						<p>
-							<h4>Тест 2</h4>
+							<h4>Тест 3</h4>
 							<p>Очень интересное свойство у унарного +. Допустим у нас 2 апельсина и 3 яблока. Нам нужно узнать сколько всего фруктов</p>
 							<div class="code">
 								<p>let orange = "2", 
@@ -136,6 +136,46 @@
 							</div>
 							<button type="button" class="btn btn-outline-primary" onclick="les_3_2()">Запуск</button>
 							<p>Пояснения 2. Теперь, сначала мы преобразуем строчки в числа, а затем складываем.</p>
+						</p>
+						<hr> <!--Урок 4-->
+						<p>
+							<h4>Тест 4</h4>
+							<p>Замена оператора if на оператор ?</p>
+							<div class="code">
+								<p>
+									let age = prompt('Ваш возраст', '');
+    									<br>(age > 20) ? 
+        								<br>alert('взрослый') : alert('мелкий');
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_4()">Запуск</button>
+						</p>
+						<hr> <!--Урок 5-->
+						<p>
+							<h4>Тест 5</h4>
+							<p>Применение || при выполнении функций. Нам вернет певое истинное значение.</p>
+							<div class="code">
+								<p>
+									alert(1 || 0); // Нам выведет 1, так как первое истинное значение это 1
+    								<br>alert(null || 0 || 10); //Нам выведет 10, так как перед этим значения - ложь
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_5()">Запуск</button>
+						</p>
+						<hr> <!--Урок 6-->
+						<p>
+							<h4>Тест 6</h4>
+							<p>Применение || при выполнении функций. Нам вернет певое истинное значение.</p>
+							<div class="code">
+								<p>
+									let x;
+    								<br>true || (x=1); //в выражении мы сразу натыкаемся на правду, поэтому вычисление останавливается, присовения 1 иксу не происходит
+    								<br>alert(x); //undefined, потому что (x = 1) не вычисляется
+    								<br>false || (x=1) //в выражении мы сразу натыкаемся на ложь, поэтому процесс вычисления продолжается, присовения 1 иксу  происходит
+    								<br>alert(x);
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_6()">Запуск</button>
 						</p>
 					</div>
 				</div>
