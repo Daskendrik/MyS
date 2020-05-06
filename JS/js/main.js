@@ -73,3 +73,21 @@ function les_6() {
     false || (x=1) //в выражении мы сразу натыкаемся на ложь, поэтому процесс вычисления продолжается, присовения 1 иксу  происходит
     alert(x);
 }
+
+function les_7() {
+    let login = prompt('Введите логин', '');
+    if (login == 'Админ') {
+        let pass = prompt('Введите пароль', '');
+        if (pass == 'Я главная') {
+            alert('Здравствуйте!');
+        } else if (pass == null) {
+            alert('Отменено');
+        } else {
+            alert('Неверный пароль')
+        }
+    } else if (login == null) {
+        alert('Отменено');
+    } else {
+        alert('Я вас не знаю')
+    }
+}
