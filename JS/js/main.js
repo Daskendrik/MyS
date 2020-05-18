@@ -29,6 +29,25 @@ function else_if() {
     alert(b);
 }
 
+function while_break() {
+    let sum = 0;
+    while(true){
+        let value = +prompt("Введите число", '');
+        if(!value) break;
+        sum+=value;
+    }
+    alert ('Сумма: ' + sum);
+}
+
+function outer_mark() {
+    outer:for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            let input = prompt ('Значение на координатах (${i}),${j}', '');
+            if(!input) break outer;
+        }
+    }
+    alert('Готово');
+}
 
 //Раздел задачи/тесты
 function les_1() {
@@ -90,4 +109,30 @@ function les_7() {
     } else {
         alert('Я вас не знаю')
     }
+}
+
+function les_8(argument) {
+    end:
+    while(true){
+        let a = prompt('Введите число больше 100', '');
+        if (a>100 || !a) {
+            break end
+        } else {
+            alert('Неверно! Попробуйте еще раз!')
+        }
+    }
+}
+
+function les_9() {
+    
+        let a = prompt('Введите до какого числа необходимо найти простые числа', '');
+        for (let i = 2; i<=a; i++){
+            for(let j = 2; j<=i; j++){
+                if (j==i) {
+                    alert(i);
+                } else if (i % j == 0) {
+                    break;
+                }
+            }
+        }
 }
