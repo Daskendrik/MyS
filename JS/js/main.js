@@ -49,6 +49,18 @@ function outer_mark() {
     alert('Готово');
 }
 
+function switch_case() {
+    let a = "1";
+    let b = 0;
+    switch (+a) {
+        case b + 1:
+            alert("Выполнится, т.к. значением +a будет 1, что в точности равно b+1");
+            break;
+        default:
+            alert("Это не выполнится");
+    }
+}
+
 //Раздел задачи/тесты
 function les_1() {
     alert("Раз, раз, првоерка связи! :)");

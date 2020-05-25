@@ -350,6 +350,60 @@
 							<button type="button" class="btn btn-outline-primary" onclick="outer_mark()">Запуск</button>
 							<p>Вызов break/continue возможен только внутри цикла, и метка должна находиться где-то выше этой директивы.</p>
 						</p>
+						<hr><!--Switch-->
+						<p>
+							<h2>Конструкция "switch"</h2>
+							<p>Конструкция switch заменяет собой сразу несколько if. Переменная x проверяется на строгое равенство первому значению value1, затем второму value2 и так далее. Если соответствие установлено – switch начинает выполняться от соответствующей директивы case и далее, до ближайшего break (или до конца switch). Если ни один case не совпал – выполняется (если есть) вариант default. Конструкция выглядит таким образом:</p>
+							<div class="code">
+								<p>
+									switch(x) {
+									<br> case 'значение х1':
+									<br>&nbsp;&nbsp;...
+									<br>&nbsp;&nbsp;[break]
+									<br> case 'значение х2':
+									<br>&nbsp;&nbsp;...
+									<br>&nbsp;&nbsp;[break]
+									<br> default:
+									<br>&nbsp;&nbsp;...
+									<br>&nbsp;&nbsp;[break]
+									<br>}
+								</p>
+							</div>
+							<p>Если break нет, то выполнение пойдёт ниже по следующим case, при этом остальные проверки игнорируются.</p>
+							<p>Интересный пример, switch и case допускают любое выражение в качестве аргумента:</p>
+							<div class="code">
+								<p>
+									let a = "1";
+									<br>let b = 0;
+									<br>switch (+a) {
+  									<br>&nbsp;&nbsp;case b + 1:
+    								<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Выполнится, т.к. значением +a будет 1, что в точности равно b+1");
+    								<br>&nbsp;&nbsp;&nbsp;&nbsp;break;
+  									<br>&nbsp;&nbsp;default:
+    								<br>&nbsp;&nbsp;&nbsp;&nbsp;alert("Это не выполнится");
+									<br>}
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="switch_case()">Запуск</button>
+							<h4>Группирока case</h4>
+							<p>Иногда, чтобы не писать один и тот же код для нескольких вариантов кейсов, можно их сгруппировать. Сгруппируем 2 и 3 значение.:</p>
+							<div class="code">
+								<p>
+									switch(x) {
+									<br> case 'значение х1':
+									<br>&nbsp;&nbsp;...
+									<br>&nbsp;&nbsp;[break]
+									<br> case 'значение х2':
+									<br> case 'значение х3':
+									<br>&nbsp;&nbsp;...
+									<br>&nbsp;&nbsp;[break]
+									<br> default:
+									<br>&nbsp;&nbsp;...
+									<br>&nbsp;&nbsp;[break]
+									<br>}
+								</p>
+							</div>
+						</p>
 					</div>
 				</div>
 			</div>
