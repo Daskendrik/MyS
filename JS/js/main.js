@@ -61,6 +61,13 @@ function switch_case() {
     }
 }
 
+function showMessage(from, text) {
+    alert(from + ': ' + text);
+}
+
+
+
+
 //Раздел задачи/тесты
 function les_1() {
     alert("Раз, раз, првоерка связи! :)");
