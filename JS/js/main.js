@@ -65,7 +65,12 @@ function showMessage(from, text) {
     alert(from + ': ' + text);
 }
 
-
+function showFun() {
+    function sayHi() {
+        alert( "Привет" );
+    }
+    alert( sayHi ); // выведет код функции
+}
 
 
 //Раздел задачи/тесты
@@ -154,4 +159,38 @@ function les_9() {
                 }
             }
         }
+}
+
+function les_10() {
+    function checkAge(age) {
+        if (age > 18) {
+            return true;
+        } else {
+            return confirm('А родители разрешили?');
+        }
+    }
+    let age = prompt('Сколько вам лет?', 18);
+
+    if ( checkAge(age) ) {
+    alert( 'Доступ получен' );
+    } else {
+    alert( 'Доступ закрыт' );
+    }
+}
+
+function les_11() {
+    let a = prompt('Чему равно а', '0');
+    let b = prompt('Чему равно b', '0');
+    alert(Les_11_1(a, b));
+
+}
+
+function Les_11_1(a, b) {
+    if (a>b) {
+        return a;
+    } else if (a == b) {
+        return 'Они равны';
+    } else {
+        return b;
+    }
 }

@@ -232,7 +232,7 @@
 						</p>
 						<hr> <!--Урок 9-->
 						<p>
-							<h4>Урок 9! Важно, чяасто спрашивают на собеседовании!Вывести простые числа</h4>
+							<h4>Урок 9! Важно, часто спрашивают на собеседовании!Вывести простые числа</h4>
 							<p>Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1. Другими словами, n > 1 – простое, если при его делении на любое число кроме 1 и n есть остаток. Например, 5 это простое число, оно не может быть разделено без остатка на 2, 3 и 4. Напишите код, который выводит все простые числа из интервала от 2 до n. Для n = 10 результат должен быть 2,3,5,7. P.S. Код также должен легко модифицироваться для любых других интервалов.</p>
 							<p>Это было долго и мучительно, но у меня вроде получилось!</p>
 							<div class="code">
@@ -250,6 +250,52 @@
 								</p>
 							</div>
 							<button type="button" class="btn btn-outline-primary" onclick="les_9()">Запуск</button>
+						</p>
+						<hr> <!--Урок 10-->
+						<p>
+							<h4>Урок 10. Родительский контроль</h4>
+							<div class="code">
+								<p>
+									function checkAge(age) {
+  									<br>&nbsp;&nbsp;if (age > 18) {
+    								<br>&nbsp;&nbsp;&nbsp;&nbsp;return true;
+  									<br>&nbsp;&nbsp;} else {
+    								<br>&nbsp;&nbsp;&nbsp;&nbsp;return confirm('А родители разрешили?');
+  									<br>&nbsp;&nbsp;}
+									<br>}
+									<br>let age = prompt('Сколько вам лет?', 18);
+									<br>if ( checkAge(age) ) {
+  									<br>&nbsp;&nbsp;alert( 'Доступ получен' );
+									<br>} else {
+  									<br>&nbsp;&nbsp;alert( 'Доступ закрыт' );
+									<br>}
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_10()">Запуск</button>
+						</p>
+						<hr> <!--Урок 11-->
+						<p>
+							<h4>Урок 11.</h4>
+							<p>Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b. Довольно интересно, у меня получилось с первого раза! По кнопке мы вызываем les_11()</p>
+							<div class="code">
+								<p>
+									function les_11() {
+    									<br>&nbsp;&nbsp;let a = prompt('Чему равно а', '0');
+    									<br>&nbsp;&nbsp;let b = prompt('Чему равно b', '0');
+    									<br>&nbsp;&nbsp;alert(Les_11_1(a, b));
+									<br>}
+									<br>function Les_11_1(a, b) {
+    									<br>&nbsp;&nbsp;if (a>b) {
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;return a;
+    									<br>&nbsp;&nbsp;} else if (a == b) {
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;return 'Они равны';
+    									<br>&nbsp;&nbsp;} else {
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;return b;
+    									<br>&nbsp;&nbsp;}
+									<br>}
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_11()">Запуск</button>
 						</p>
 					</div>
 				</div>
