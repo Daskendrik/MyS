@@ -297,6 +297,42 @@
 							</div>
 							<button type="button" class="btn btn-outline-primary" onclick="les_11()">Запуск</button>
 						</p>
+						<hr> <!--Урок 12-->
+						<p>
+							<h4>Урок 12</h4>
+							<p>Наша функция должна задать вопрос question и, в зависимости от того, как ответит пользователь, вызвать yes() или no():</p>
+							<div class="code">
+								<p>
+									function ask(question, yes, no) {
+  									<br>&nbsp;&nbsp;if (confirm(question)) yes()
+  									<br>&nbsp;&nbsp;else no();
+									<br>}
+									<br>function showOk() {
+  									<br>&nbsp;&nbsp;alert( "Вы согласны." );
+									<br>}
+									<br>function showCancel() {
+  									<br>&nbsp;&nbsp;alert( "Вы отменили выполнение." );
+									<br>}
+									<br>// использование: функции showOk, showCancel передаются в качестве аргументов ask
+									<br>ask("Вы согласны?", showOk, showCancel);
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_12()">Запуск</button>
+							<p>Этот же пример можно написать так:</p>
+							<div class="code">
+								<p>
+									function ask(question, yes, no) {
+  									<br>if (confirm(question)) yes() //Если (задаем вопрос, если отвечам Да, то это true) срабаывает yes (ниже этой пемеменной мы задаем функцию)
+  									<br>else no();
+									<br>}
+									<br>ask(
+  									<br>"Вы согласны?",
+  									<br>function() { alert("Вы согласились."); },
+  									<br>function() { alert("Вы отменили выполнение."); }
+									<br>);
+								</p>
+							</div>
+						</p>
 					</div>
 				</div>
 			</div>
