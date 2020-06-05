@@ -2,12 +2,11 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>SQL.Начало</title>
+	<title>JS.Начало</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css"> 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-			<script type="text/javascript" src="js/main.js"></script>
-
+	<script type="text/javascript" src="js/main.js"></script>
     												<!--скрипт определения метонахождения-->
     <script type="text/javascript">$(function () {  
     $('.menu a').each(function () { 
@@ -28,7 +27,7 @@
 			<div class="row" style="background: #FFBF00; border: solid;">
 				<div class="col col-12">
 				<h1 style="text-align: center;">Краткий справочник JS</h3>
-				<p style="text-align: right;">Языки/JS/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				<p style="text-align: right;">Языки/JS/Основы</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
 				</div>
 			</div>
 																					<!--верхние кнопки -->
@@ -94,56 +93,9 @@
 
 																													<!--Начало главного блока-->
 					<div class="col" style="background: #FAEEDD; ">
-						<h2>Встроенные функции</h2>
-						<p>Тут добавлю, что если нам необходимо использовать при алерте именно значение переменной, необходимо писать так:</p>
-						<h4>alert</h4>
-						<p>Этот код отобразит окно в браузере и приостановит дальнейшее выполнение скриптов до тех пор, пока пользователь не нажмёт кнопку «OK». От себя добавлю, что скобки должны быть впритык к слову алерт! Шаблончик такой:</p>
-						<div class="code">
-							<p>alert(message);</p>
-						</div>
-						<p>Это небольшое окно с сообщением называется модальным окном. Понятие модальное означает, что пользователь не может взаимодействовать с интерфейсом остальной части страницы, нажимать на другие кнопки и т.д. до тех пор, пока взаимодействует с окном. В данном случае – пока не будет нажата кнопка «OK». Например:</p>
-						<div class="code">
-							<p>
-								alert("Хай пипл!")
-							</p>
-						</div>
-						<button type="button" class="btn btn-outline-primary" onclick="alert_1()">Запуск</button>
-						<hr>
-						<h4>prompt</h4>
-						<p>Этот код отобразит модальное окно с текстом, полем для ввода текста и кнопками OK/Отмена. Шаблончик такой:</p>
-						<div class="code">
-							<p>result = prompt(title, [default]);</p>
-						</div>
-						<p>title это текст-вопрос 
-							<br>default - какой ответ по дефолту, он не обязатедлен, но лучше всегда ставить.
-							<br>Если пользователь нажимает "Отмена", введенное значение засчитывается как null.
-							<br>Получается, что значение переменной присваевает пользователь.</p>
-						<div class="code">
-							<p>
-								<p>let age = prompt('Сколько тебе лет?', 100);
-								<br>alert(`Тебе ${age} лет!`); // Тебе 100 лет!</p>
-							</p>
-						</div>
-						<button type="button" class="btn btn-outline-primary" onclick="prompt_1()">Запуск</button>
-						<hr>
-						<h4>confirm</h4>
-						<p>Функция confirm отображает модальное окно с текстом вопроса question и двумя кнопками: OK и Отмена.
-							<br>Результат true, если нажата кнопка OK. В других случаях – false.
-							<br>Шаблончик:</p>
-						<div class="code">
-							<p>result = confirm(question);</p>
-						</div>
-						<p>Получается, что значение переменной присваевает пользователь, в данном случае, это true или false.</p>
-						<div class="code">
-							<p>
-								<p>let age = prompt('Сколько тебе лет?', 100);
-								<br>alert(`Тебе ${age} лет!`); // Тебе 100 лет!</p>
-							</p>
-						</div>
-						<button type="button" class="btn btn-outline-primary" onclick="confirm_1()">Запуск</button>
 						<hr><!--Функции-->
 						<p>
-							<h2>Функции. Основы</h2>
+							<h2>Функции</h2>
 							<p>Функции являются основными «строительными блоками» программы. Сущестует 2  вида объявления функций: Function Declaration и  Function Expression. </p>
 							<h3>Function Declaration  (Объявление Функции)</h3>
 							<p> Конструкция функции выглядит так:</p>
@@ -226,37 +178,6 @@
 								<br>Теперь функция может быть вызвана с помощью обеих переменных sayHi() и func().</p>
 							<h3>Функциями-колбэки или просто колбэки</h3>
 							<p>Ключевая идея в том, что мы передаём функцию и ожидаем, что она вызовется обратно (от англ. «call back» – обратный вызов) когда-нибудь позже, если это будет необходимо. Пример такой функции урок 12.</p>
-							<h4>Фнкции стрелки</h4>
-							<p>Довольно инетересно. Самый коротки синтаксис создания функции - функции стрелки. Шаблон:</p>
-							<div class="code">
-								<p>
-									let func = (arg1, arg2, ...argN) => expression
-								</p>
-							</div>
-							<p>Такой код создаёт функцию func с аргументами arg1..argN и вычисляет expression с правой стороны с их использованием, возвращая результат. Если перевести на прошлый шаблон, то это выглядеть будет так:</p>
-							<div class="code">
-								<p>
-									let func = function(arg1, arg2, ...argN) {
-  									<br>&nbsp;&nbsp;return expression;
-									<br>};
-								</p>
-							</div>
-							<p>Например</p>
-							<div class="code">
-								<p>
-									let sum = (a, b) => a + b;
-								</p>
-							</div>
-							<p>То есть, (a, b) => a + b задаёт функцию с двумя аргументами a и b, которая при запуске вычисляет выражение справа a + b и возвращает его результат. <br>Стоит еще вот что запомнить: </p>
-							<div class="code">
-								<p>
-									let sum = (a, b) => {  // фигурная скобка, открывающая тело многострочной функции
-  									<br>let result = a + b;
-  									<br>return result; // при фигурных скобках для возврата значения нужно явно вызвать return
-									<br>};
-								</p>
-							</div>
-							<p>В данном случае тело функции большое, поэтому используются скобки, но в таком случае необходимо писать, что вовращать! <br>И еще: если у нас только один аргумент, то круглые скобки вокруг параметров можно опустить и если нет аргументов, указываются пустые круглые скобки.</p>
 						</p>
 					</div>
 				</div>
