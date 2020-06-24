@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>SQL.Начало</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    												<!--скрипт определения метонахождения-->
+    <script type="text/javascript">$(function () {  
+    $('.menu a').each(function () { 
+        var location = window.location.href; 
+        var link = this.href;  
+        if(location == link) { 
+            $(this).addClass('mainmenu_a');
+            $(this).addClass('col');
+            $(this).removeClass('mainmenu_n');
+            $(this).removeClass('col-lg-6');
+        }
+        });
+    });
+    </script>
+</head>
+<body style=" background: #FFEB73">
+	<div class="container" > 
+			<div class="row" style="background: #FFBF00; border: solid;">
+				<div class="col col-12">
+				<h1 style="text-align: center;">Краткий справочник JS</h3>
+				<p style="text-align: right;">Языки/JS/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				</div>
+			</div>
+																					<!--верхние кнопки -->
+			<div class="row" style="background: #FFBF00; border-bottom: dotted; border-right: dotted; border-left: dotted">
+										
+									<div class = "col col-12" style="text-align: center; margin: 1% ">
+									<a href="../index.html"><button class="btn btn-dark">Вернуться на главную страницу</button></a>
+								</div>
+			</div>
+
+		<div class="row " style="min-height: 750px ">
+
+																					<!--Меню -загладка -->
+			<div class="col col-lg-1 menu">
+										<div class="row justify-content-end" style="height: 150px; ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_start.html">
+													<div class="mainmenutext">Введение</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_main.html" >
+												<div class="mainmenutext">Основы</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_fun.html">
+												<div class="mainmenutext">Фнукции</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_ob.html">
+												<div class="mainmenutext">Объект</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_1_table.html">
+												<div class="mainmenutext">Анимация</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_work.html">
+												<div class="mainmenutext">Тренеровка</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_must_know.html">
+												<div class="mainmenutext">Особенности</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_something.html">
+												<div class="mainmenutext">Другое</div>
+											</a>
+										</div>
+			</div>
+																					<!--Меню -загладка -->
+	
+
+			<div class="col col-lg-11" >
+				<div class="row" style="height: 100%; border: ridge;">
+							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid" >
+								<p style="text-align: center;">Тут пока ничего не будет</p>
+							</div>
+							<div  style="background: #FAEEDD;; width: 35px;  position: relative; display: inline-block;">
+									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
+									<img id="block" src="img/arrow-bar-right.svg" alt="" style="width: 100%; display: none;" onclick="(document.getElementById('sec_menu').style.display='block', document.getElementById('hide').style.display='block', document.getElementById('block').style.display='none' )"></img>
+							</div>
+
+																													<!--Начало главного блока-->
+					<div class="col" style="background: #FAEEDD; ">
+						<p>
+							<h1>Объекты</h1>
+							<p>Объекты же используются для хранения коллекций различных значений и более сложных сущностей. (массив?) Он состадется 2 способами:</p>
+							<div class="code">
+								<p>
+									let user = new Object(); // синтаксис "конструктор объекта"
+									<br>let user = {};  // синтаксис "литерал объекта"
+								</p>
+							</div>
+							<h4>Литералы</h4>
+							<p>При использовании литерального синтаксиса {...} мы сразу можем поместить в объект несколько свойств в виде пар «ключ: значение». Имя свойства может состоять из нескольких слов, но тогда оно должно быть заключено в кавычки. Значение может быть любого типа. Последнее свойство объекта может заканчиваться запятой</p>
+							<div class="code">
+								<p>
+									let user = {     // объект
+  									<br>&nbsp;&nbsp;name: "John",  // под ключом "name" хранится значение "John"
+  									<br>&nbsp;&nbsp;age: 30        // под ключом "age" хранится значение 30
+									<br>};
+									<br>//Что то типо 
+									<br>//Свойство(поле): значение
+								</p>
+							</div>
+							<h4>Обращение</h4>
+							<p>Для обращения к свойствам используется запись «через точку»</p>
+							<div class="code">
+								<p>
+									// получаем свойства объекта:
+									<br>alert( user.name ); // John
+									<br>alert( user.age ); // 30
+								</p>
+							</div>
+							<h4>Добавление/Удаление свойств</h4>
+							<p>Для удаления свойств используется оператор delete</p>
+							<div class="code">
+								<p>
+									user.isAdmin = true;
+									<br>delete user.age;
+								</p>
+							</div>
+							<h4>Обращение к свойствам из нескольких слов</h4>
+							<p>Для свойств, имена которых состоят из нескольких слов, доступ к значению «через точку» не работает. Для таких случаев существует альтернативный способ доступа к свойствам через квадратные скобки. Такой способ сработает с любым именем свойства</p>
+							<div class="code">
+								<p>
+									let user = {};
+
+									<br>// присваивание значения свойству
+									<br>user["likes birds"] = true;
+
+									<br>// получение значения свойства
+									<br>alert(user["likes birds"]); // true
+
+									<br>// удаление свойства
+									<br>delete user["likes birds"];
+								</p>
+							</div>
+							<p>Квадратные скобки также позволяют обратиться к свойству, имя которого может быть результатом выражения. Например, имя свойства может храниться в переменной:</p>
+							<div class="code">
+								<p>
+									let key = "likes birds";
+
+									<br>// то же самое, что и user["likes birds"] = true;
+									<br>user[key] = true;
+								</p>
+							</div>
+							<h4>Вычисляемые свойства</h4>
+							<p>Иногда имя параметру можно задавать из вне, а в объекте ссылаться на эту переменную из вне. Выглядит это так:</p>
+							<div class="code">
+								<p>
+									let fruit = prompt("Какой фрукт купить?", "apple"); // тут мы задаем переменную fruit
+									<br>let bag = {};//создаем объект
+
+									<br>// имя свойства будет взято из переменной fruit
+									<br>bag[fruit] = 5; 
+								</p>
+							</div>
+							<p>Так же можно сделать комбо, например задать так:</p>
+							<div class="code">
+								<p>
+									[fruit + 'Computers']: 5 // bag.appleComputers = 5
+								</p>
+							</div>
+							<p>Подведём итог: в большинстве случаев, когда имена свойств известны и просты, используется запись через точку. Если же нам нужно что-то более сложное, то мы используем квадратные скобки.</p>
+							<h4>Свойство из переменной</h4>
+							<p>Если параметр свойства равен названию свойства, можно сокрощать так:</p>
+							<div class="code">
+								<p>
+									let user = {
+  									<br>&nbsp;&nbsp;name,  // тоже самое, что и name:name
+  									<br>&nbsp;&nbsp;age: 30
+									<br>};
+								</p>
+							</div>
+							<h4>Проверка существования свойств</h4>
+							<p>Проверка, которая вернет нам true или false, выглядит так: </p>
+							<div class="code">
+								<p>
+									"key" in object //свойство В объекте
+								</p>
+							</div>
+							<p>Например:</p>
+							<div class="code">
+								<p>
+									let user = { name: "John", age: 30 };
+
+									<br>alert( "age" in user ); // true, user.age существует
+									<br>alert( "blabla" in user ); // false, user.blabla не существует
+								</p>
+							</div>
+							<p>Стоит отметить, что проверяемое свойство ставится в кавычки, только если это не переменная, которой присовенно имя св-ва. Например:</p>
+							<div class="code">
+								<p>
+									let user = { age: 30 };
+
+									<br>let key = "age";
+									<br>alert( key in user ); // true, имя свойства было взято из переменной key
+								</p>
+							</div>
+							<p>Стоит отметить, что так же проверить можно вот так:</p>
+							<div class="code">
+								<p>
+									let user = {};
+
+								<br>alert( user.noSuchProperty === undefined ); // true означает "свойства нет"
+								</p>
+							</div>
+							<p>Мне больше нравится пока что IN.</p>
+							<h4>Проверка циклом for...in</h4>
+							<p>Если мы хотим посмотреть все свойства и значения объекта, необходимо исполоьзовать цикл</p>
+							<div class="code">
+								<p>
+									let user = {
+  									<br>&nbsp;&nbsp;name: "John",
+  									<br>&nbsp;&nbsp;age: 30,
+  									<br>&nbsp;&nbsp;isAdmin: true
+									<br>};
+
+									<br>for (let key in user) {
+  									<br>&nbsp;&nbsp;// ключи
+  									<br>&nbsp;&nbsp;alert( key );  // name, age, isAdmin
+  									<br>&nbsp;&nbsp;// значения ключей
+ 									<br>&nbsp;&nbsp;alert( user[key] ); // John, 30, true
+									<br>}
+								</p>
+							</div>
+							<p>Шаблон:</p>
+							<div class="code">
+								<p>
+									for (key in object) {
+  									<br>// тело цикла выполняется для каждого свойства объекта
+									<br>}		
+								</p>
+							</div>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class = "col-12" style="background: #FFBF00; border: dotted;">
+			<p style="text-align: center;">ЭТО ДНИЩЕ САЙТА </p>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

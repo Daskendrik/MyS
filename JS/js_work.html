@@ -59,6 +59,11 @@
 											</a>
 										</div>
 										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_ob.html">
+												<div class="mainmenutext">Объект</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
 											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_1_table.html">
 												<div class="mainmenutext">Анимация</div>
 											</a>
@@ -338,6 +343,25 @@
 								</p>
 							</div>
 						</p>
+						<hr> <!--Урок 13-->
+						<p>
+							<h4>Урок 13</h4>
+							<p>Пример использования объекта и обращения к нему</p>
+							<div class="code">
+								<p>
+									let user = {
+  									<br>name: "John",
+  									<br>age: 30
+									<br>};
+
+									<br>let key = prompt("Что вы хотите узнать о пользователе?", "name");
+
+									<br>// доступ к свойству через переменную
+									<br>alert( user[key] ); // John (если ввели "name")
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_13()">Запуск</button>
+						</p>
 					</div>
 				</div>
 			</div>
@@ -348,7 +372,6 @@
 			<p style="text-align: center;">ЭТО ДНИЩЕ САЙТА </p>
 			</div>
 		</div>
-		
 	</div>
 	
 </body>
