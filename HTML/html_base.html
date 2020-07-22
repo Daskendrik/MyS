@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>SQL.Создание и редактирование</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    												<!--скрипт определения метонахождения-->
+    <script type="text/javascript">$(function () {  
+    $('.menu a').each(function () { 
+        var location = window.location.href; 
+        var link = this.href;  
+        if(location == link) { 
+            $(this).addClass('mainmenu_a');
+            $(this).addClass('col');
+            $(this).removeClass('mainmenu_n');
+            $(this).removeClass('col-lg-6');
+        }
+        });
+    });
+    </script>
+</head>
+<body style=" background: #FFEB73">
+	<div class="container" > 
+			<div class="row" style="background: #FFBF00; border: solid;">
+				<div class="col col-12">
+					<h1 style="text-align: center;">Краткий справочник SQL</h3>
+					<p style="text-align: right;">Языки/SQL/Основы</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+					<p style="text-align: center;">Немного об этом разделе. Он сделан без большого количества JS, так как это первый раздел. В дальнейешм это будет поправляться.</p>
+				</div>
+			</div>
+																					<!--верхние кнопки -->
+			<div class="row" style="background: #FFBF00; border-bottom: dotted; border-right: dotted; border-left: dotted">
+									
+								<div class = "col col-12" style="text-align: center; margin: 1% ">
+									<h3>Кнопки пока не работают</h3>
+									<button class="btn btn-dark" style="width: 200px">Распечатать</button>
+									<button class="btn btn-dark" style="width: 200px">Сохранить</button>
+									<button class="btn btn-dark" style="width: 200px">Отправить на почту</button>
+									<button class="btn btn-dark" style="width: 200px">Выбрать другой раздел</button>
+								</div>
+			</div>
+
+		<div class="row " style="min-height: 750px ">
+
+																					<!--Меню -загладка -->
+			<div class="col col-lg-1 menu">
+										<div class="row justify-content-end" style="height: 150px; ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_start.html">
+													<div class="mainmenutext">Введение</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_base.html" >
+												<div class="mainmenutext">Основы</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_1_table.html">
+												<div class="mainmenutext">1 таблица</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_2_tables.html">
+												<div class="mainmenutext">Несколько таблиц</div>
+											</a>
+										</div>
+			</div>
+																					<!--Меню -загладка -->
+	
+
+			<div class="col col-lg-11" >
+				<div class="row" style="height: 100%; border: ridge;">
+							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid" >
+								<p style="text-align: center;color: blue; font-size: 18px ">Структура раздела</p>
+								<p><a style="color: blue" href="#Таблица. Свойства">Таблица. Свойства</a></p>
+								<p><a style="color: blue"  href="#Создание таблицы">Создание таблицы</a></p>
+								<p><a style="color: blue" href="#Заполнение таблицы">Заполнение таблицы</a></p>
+							</div>
+							<div  style="background: #FAEEDD;; width: 35px;  position: relative; display: inline-block;">
+									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
+									<img id="block" src="img/arrow-bar-right.svg" alt="" style="width: 100%; display: none;" onclick="(document.getElementById('sec_menu').style.display='block', document.getElementById('hide').style.display='block', document.getElementById('block').style.display='none' )"></img>
+							</div>
+					<div class="col maintext" >
+							<p><a id="Таблица. Свойства" name="Таблица. Свойства">Таблица. Свойства</a></p>
+
+							<p>В общем, ничего нового о таблице особо не напишешь. Она состоит из строк и столбцов, имет свое уникальное название.&nbsp;Можно немного поговорить об особенностях таблиц, с которыми работает SQL.&nbsp;</p>
+
+							<ol>
+								<li>Поле это пересечение столбца и строки</li>
+								<li>Каждая таблица должна содержать в себе уникальный столбец - ключ (на нашем проекте это row_id). При создании записи в таблицу можно заполнять это поле вручную, но чаще всего это поле ставится на автоматическое заполнение.&nbsp;</li>
+								<li>&nbsp;NULL и &quot;&quot; в полях - это разные вещи</li>
+							</ol>
+
+							<p>Начнем с того, что создадим такую вот таблицу:</p>
+
+							<table border="1" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td style="width:65px">
+										<p style="text-align:center"><span style="font-size:14px"><strong>Row_id</strong></span></p>
+										</td>
+										<td style="width:59px">
+										<p style="text-align:center"><span style="font-size:14px"><strong>Family</strong></span></p>
+										</td>
+										<td style="width:90px">
+										<p style="text-align:center"><span style="font-size:14px"><strong>LastName </strong></span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px"><strong>First_name</strong></span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px"><strong>Middle_name</strong></span></p>
+										</td>
+										<td style="width:84px">
+										<p style="text-align:center"><span style="font-size:14px"><strong>Telephone</strong></span></p>
+										</td>
+										<td style="width:72px">
+										<p style="text-align:center"><span style="font-size:14px"><strong>Mark</strong></span></p>
+										</td>
+										<td style="width:78px">
+										<p style="text-align:center"><span style="font-size:14px"><strong>Model</strong></span></p>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:65px">
+										<p style="text-align:center"><span style="font-size:14px">1</span></p>
+										</td>
+										<td style="width:59px">
+										<p style="text-align:center"><span style="font-size:14px">1</span></p>
+										</td>
+										<td style="width:90px">
+										<p style="text-align:center"><span style="font-size:14px">Иванов</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Вася</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center">&nbsp;</p>
+										</td>
+										<td style="width:84px">
+										<p style="text-align:center"><span style="font-size:14px">123456</span></p>
+										</td>
+										<td style="width:72px">
+										<p style="text-align:center"><span style="font-size:14px">Nokia</span></p>
+										</td>
+										<td style="width:78px">
+										<p style="text-align:center"><span style="font-size:14px">N1</span></p>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:65px">
+										<p style="text-align:center"><span style="font-size:14px">2</span></p>
+										</td>
+										<td style="width:59px">
+										<p style="text-align:center"><span style="font-size:14px">1</span></p>
+										</td>
+										<td style="width:90px">
+										<p style="text-align:center"><span style="font-size:14px">Иванов</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Вася</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Иванович</span></p>
+										</td>
+										<td style="width:84px">
+										<p style="text-align:center"><span style="font-size:14px">234567</span></p>
+										</td>
+										<td style="width:72px">
+										<p style="text-align:center"><span style="font-size:14px">Nokia</span></p>
+										</td>
+										<td style="width:78px">
+										<p style="text-align:center"><span style="font-size:14px">N2</span></p>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:65px">
+										<p style="text-align:center"><span style="font-size:14px">3</span></p>
+										</td>
+										<td style="width:59px">
+										<p style="text-align:center"><span style="font-size:14px">1</span></p>
+										</td>
+										<td style="width:90px">
+										<p style="text-align:center"><span style="font-size:14px">Иванова</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Ивана</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Ивановна</span></p>
+										</td>
+										<td style="width:84px">
+										<p style="text-align:center"><span style="font-size:14px">345678</span></p>
+										</td>
+										<td style="width:72px">
+										<p style="text-align:center"><span style="font-size:14px">Nokia</span></p>
+										</td>
+										<td style="width:78px">
+										<p style="text-align:center"><span style="font-size:14px">N1</span></p>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:65px">
+										<p style="text-align:center"><span style="font-size:14px">4</span></p>
+										</td>
+										<td style="width:59px">
+										<p style="text-align:center"><span style="font-size:14px">2</span></p>
+										</td>
+										<td style="width:90px">
+										<p style="text-align:center"><span style="font-size:14px">Кукушкина</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Анастасия</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Сергеевна</span></p>
+										</td>
+										<td style="width:84px">
+										<p style="text-align:center"><span style="font-size:14px">456789</span></p>
+										</td>
+										<td style="width:72px">
+										<p style="text-align:center"><span style="font-size:14px">Sony</span></p>
+										</td>
+										<td style="width:78px">
+										<p style="text-align:center"><span style="font-size:14px">S1</span></p>
+										</td>
+									</tr>
+									<tr>
+										<td style="width:65px">
+										<p style="text-align:center"><span style="font-size:14px">5</span></p>
+										</td>
+										<td style="width:59px">
+										<p style="text-align:center"><span style="font-size:14px">2</span></p>
+										</td>
+										<td style="width:90px">
+										<p style="text-align:center"><span style="font-size:14px">Кукушкин</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Дмитрий</span></p>
+										</td>
+										<td style="width:87px">
+										<p style="text-align:center"><span style="font-size:14px">Сергеевич</span></p>
+										</td>
+										<td style="width:84px">
+										<p style="text-align:center"><span style="font-size:14px">567890</span></p>
+										</td>
+										<td style="width:72px">
+										<p style="text-align:center"><span style="font-size:14px">Sony</span></p>
+										</td>
+										<td style="width:78px">
+										<p style="text-align:center"><span style="font-size:14px">S2</span></p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p>Для этого необходимо пройти 2 этапа: создание таблицы и ее заполнение.</p>
+
+							<p>&nbsp;<a id="Создание таблицы">Создание таблицы</a>&nbsp;</p>
+
+							<p>У нас будут следующие колонки: &nbsp;Row_id, Family, LastName, First_name, Middle_name, Telephone, Mark, Model. Название таблицы Telephone. Поля, которые не должны быть пустыми должны маркироваться <strong>NOT NULL</strong>. В таблицах так же должен присутствовать ключ, в нашей таблице это row_id, и чтобы самим не запоминать и не придумывать этот ключ поручим это таблицы и подпишем <strong>AUTO_INCREMENT</strong>.&nbsp; Так же зпишем&nbsp;<strong>PRIMARY KEY</strong>, об этом ппж.</p>
+
+							<hr />
+							<div class="sqlcode">
+							<p><strong><span style="color:#0000FF">CREATE TABLE</span></strong> Telephone (</p>
+
+							<p style="margin-left:40px">Row_id int AUTO_INCREMENT,</p>
+
+							<p style="margin-left:40px">&nbsp;Family int NOT NULL,</p>
+
+							<p style="margin-left:40px">LastName varchar(20) NOT NULL,</p>
+
+							<p style="margin-left:40px">First_name varchar(20) NOT NULL,</p>
+
+							<p style="margin-left:40px">&nbsp;Middle_name varchar(20),</p>
+
+							<p style="margin-left:40px">Telephone int NOT NULL,</p>
+
+							<p style="margin-left:40px">Mark varchar(20),</p>
+
+							<p style="margin-left:40px">Model &nbsp;varchar(20)),</p>
+
+							<p style="margin-left:40px">PRIMARY KEY (Row_id)</p>
+							</div>
+
+							<hr />
+							<p>&nbsp;<a id="Заполнение таблицы" name="Заполнение таблицы">Заполнение таблицы</a></p>
+
+							<p>Теперь необходимо ее заполнить.</p>
+
+							<p>Для заполнения используем <strong><span style="color:#0000FF">INSERT INTO ...&nbsp;VALUES</span></strong></p>
+
+							<p><strong><span style="color:#0000FF">INSERT INTO</span></strong> имя_таблицы <strong><span style="color:#0000FF">VALUES</span></strong> (&#39;значение_первого_столбца&#39;,&#39;значение_второго_столбца&#39;, ..., &#39;значение_последнего_столбца&#39;);</p>
+
+							<p>или</p>
+
+							<p><strong><span style="color:#0000FF">INSERT INTO</span></strong> имя_таблицы (&#39;имя_столбца&#39;, &#39;имя_столбца&#39;) <strong><span style="color:#0000FF">VALUES</span></strong> (&#39;значение_первого_столбца&#39;,&#39;значение_второго_столбца&#39;);</p>
+
+							<p>Если необходимо внести несколько строк, то после<strong> <span style="color:#0000FF">VALUES</span></strong> каждая строчка будет в ().</p>
+
+							<p><strong><span style="color:#0000FF">INSERT INTO</span></strong> имя_таблицы (&#39;имя_столбца&#39;, &#39;имя_столбца&#39;) <strong><span style="color:#0000FF">VALUES</span></strong> (&#39;значение_первого_столбца&#39;,&#39;значение_второго_столбца&#39;);</p>
+
+							<p>(&#39;значение_первого_столбца&#39;,&#39;значение_второго_столбца&#39;);</p>
+
+							<p>Заполняем таблицу</p>
+
+							<hr />
+							<div class="sqlcode">
+							<p><strong><span style="color:#0000FF">INSERT INTO</span></strong> Telephone (Family, LastName, First_name, Middle_name, Telephone, Mark, Model);<span style="color:#0000FF"> <strong>VALUES</strong></span> (&#39;1&#39;,&#39;Иванов&#39;, &#39;Вася&#39;, null, &#39;123456&#39;, &#39;Nokia&#39;, &#39;N1&#39;),</p>
+
+							<p>(&#39;1&#39;,&#39;Иванов&#39;, &#39;Вася&#39;, &#39;Иванович&#39;, &#39;234567&#39;, &#39;Nokia&#39;, &#39;N2&#39;),</p>
+
+							<p>(&#39;1&#39;,&#39;Иванова&#39;, &#39;Ивана&#39;, &#39;Ивановна&#39;, &#39;345678&#39;, &#39;Nokia&#39;, &#39;N1&#39;),</p>
+
+							<p>(&#39;2&#39;,&#39;Кукушкина&#39;, &#39;Анастасия&#39;, &#39;Сергеевна&#39;, &#39;456789&#39;, &#39;Sony&#39;, &#39;S1&#39;),</p>
+
+							<p>(&#39;2&#39;,&#39;Кукушкин&#39;, &#39;Дмитрий&#39;, &#39;Сергеевич&#39;, &#39;567890&#39;, &#39;Sony&#39;, &#39;S2&#39;);</p>
+							</div>
+
+							<hr />
+							<p>Итого, на сайте (<a href="http://sqlfiddle.com/">http://sqlfiddle.com/</a>), слева, надо написать следующий текст</p>
+							<hr />
+							<div class="sqlcode">
+							<p>&nbsp;<span style="color:#0000FF"><strong>CREATE TABLE</strong> </span>Telephone (Row_id int AUTO_INCREMENT, Family int NOT NULL, LastName varchar(20) NOT NULL, First_name varchar(20) NOT NULL, Middle_name varchar(20), Telephone int NOT NULL, Mark varchar(20), Model&nbsp; varchar(20),PRIMARY KEY (Row_id));</p>
+
+							<p><span style="color:#0000FF"><strong>INSERT INTO</strong> </span>Telephone (Family, LastName, First_name, Middle_name, Telephone, Mark, Model)</p>
+
+							<p><strong><span style="color:#0000FF">VALUES</span></strong> (&#39;1&#39;,&#39;Иванов&#39;, &#39;Вася&#39;, null, &#39;123456&#39;, &#39;Nokia&#39;, &#39;N1&#39;),</p>
+
+							<p>(&#39;1&#39;,&#39;Иванов&#39;, &#39;Вася&#39;, &#39;Иванович&#39;, &#39;234567&#39;, &#39;Nokia&#39;, &#39;N2&#39;),</p>
+
+							<p>(&#39;1&#39;,&#39;Иванова&#39;, &#39;Ивана&#39;, &#39;Ивановна&#39;, &#39;345678&#39;, &#39;Nokia&#39;, &#39;N1&#39;),</p>
+
+							<p>(&#39;2&#39;,&#39;Кукушкина&#39;, &#39;Анастасия&#39;, &#39;Сергеевна&#39;, &#39;456789&#39;, &#39;Sony&#39;, &#39;S1&#39;),</p>
+
+							<p>(&#39;2&#39;,&#39;Кукушкин&#39;, &#39;Дмитрий&#39;, &#39;Сергеевич&#39;, &#39;567890&#39;, &#39;Sony&#39;, &#39;S2&#39;);</p>
+							</div>
+							<hr />
+							<p>Проверим, что все создалось. ( пока просто используем)&nbsp;&nbsp;Select * from Telephone&nbsp;</p>
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class = "col-12" style="background: #FFBF00; border: dotted;">
+			<p style="text-align: center;">Пока тут ничего нет, но может что то и появится</p>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+<footer>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</footer>
+</html>
