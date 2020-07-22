@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/main.css"> 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
     												<!--скрипт определения метонахождения-->
     <script type="text/javascript">$(function () {  
     $('.menu a').each(function () { 
@@ -106,6 +107,7 @@
 									<br>let user = {};  // синтаксис "литерал объекта"
 								</p>
 							</div>
+							<p>Очень важно понять, {} - объект, user - сслыка на объект, его название.</p>
 							<h4>Литералы</h4>
 							<p>При использовании литерального синтаксиса {...} мы сразу можем поместить в объект несколько свойств в виде пар «ключ: значение». Имя свойства может состоять из нескольких слов, но тогда оно должно быть заключено в кавычки. Значение может быть любого типа. Последнее свойство объекта может заканчиваться запятой</p>
 							<div class="code">
@@ -248,6 +250,124 @@
 									<br>}		
 								</p>
 							</div>
+							<h4>Сортировка полей в объектах</h4>
+							<p>Все что может быть преобразовано в целые числа - идет по порядку возрастания. Все остальное по мередобавления. Описано вот <a href="https://learn.javascript.ru/object#uporyadochenie-svoystv-obekta">тут</a></p>
+							<h4>Копирование по ссылке</h4>
+							<p>ОЧЕНЬ ВАЖНО ПОНЯТЬ! <a href="https://learn.javascript.ru/object#kopirovanie-po-ssylke">Тут</a> описано по одному,я расталкую для себя по другому. По сути, объект это набор ссылок на поля, а не сами поля. Поля хранятся где то. Картинка это хорошо поясняет. В объектах user и admin мы храним ссылки на поле Name
+								<br> <img src="img\copyOb.png">
+								<br> То есть по ссылке мы можем менять и вызывать значение, то есть использовать и admin и user. Рассмотрим пример, это очень важно разобраться.
+							</p>
+							<div class="code">
+								<p>
+									let user = { 
+									<br>name: 'John',
+									<br>age: '20'
+									<br>};
+
+									<br>let admin = user; // мы скопировали самы ссылки, еще одного name и age не появились
+									<br>alert(user.name + admin.age);
+									<br>admin.name = 'Pete'; // изменено по ссылке из переменной "admin"
+									<br>user.age = '50' // изменено по ссылке из переменной "user"
+
+									<br>alert(user.name + admin.age); // 'Pete', изменения видны по ссылке из переменной "user"
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="copyOb()">Запуск</button>
+							<h4>Сравнение объектов</h4>
+							<p>Сравниваются опять же значения ссылок. Операторы равенства == и строгого равенства === для объектов работают одинаково.Д ва объекта равны только в том случае, если это один и тот же объект(то есть второй объект создан как КОПИЯ первого).Поэксперементируем отдельно в разделе Тренировка.</p>
+							<h4>Объекты-константы</h4>
+							<p>Как ни странно, такие объекты можно менять. <b>НО</b> конкретно мы можем менять <b>ЧТО</b> содержит ссылка или объект, а сами ссылки менять не можем <span style="color: red">(что как то странно, спросить бы у опытных)</span>. Например, так у нас все получится:</p>
+							<div class="code">
+								<p>
+									function const_ob_1() {
+    									<br>&nbsp;&nbsp;const user = {
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;name: "Dashka"
+    									<br>&nbsp;&nbsp;}
+    									<br>
+    									<br>&nbsp;&nbsp;user.name = 'Daria'
+    									<br>&nbsp;&nbsp;user.age = 26;
+    									<br>
+    									<br>&nbsp;&nbsp;alert(user.name + ' ' + 'возраст' + ' ' + user.age );
+									<br>}
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="const_ob_1()">Запуск</button>
+							<p>А вот так уже не сработает. Если мы посмотрим в консоли, ошибка будет как раз в тот момент, когда мы пытаемся изменить <b>объект</b>, а не ссылки</p>
+							<div class="code">
+								<p>
+									function const_ob_2() {
+    									<br>&nbsp;&nbsp;const user = {
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;name: "Dashka"
+    									<br>&nbsp;&nbsp;}
+    									<br>&nbsp;&nbsp;// Дальше ошибка
+    									<br>&nbsp;&nbsp;const user = {
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;name: "Daria"
+    									<br>&nbsp;&nbsp;}
+    									<br>
+    									<br>&nbsp;&nbsp;alert(user.name);
+									<br>}									
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="const_ob_2()">Запуск</button>
+							<h4>Копирование и объединение объектов</h4>
+							<p>Если нам надо скопировать объект, создавая новвые ссылки, мы можем использовать 2 метода. <br> 1 Метод:</p>
+							<div class="code">
+								<p>
+									function copy_ob_1() {
+    									<br>&nbsp;&nbsp;let user = {
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;name: "John",
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;age: 30
+    									<br>&nbsp;&nbsp;};
+    									<br>
+    									<br>&nbsp;&nbsp;let clone = {}; // новый пустой объект
+    									<br>
+    									<br>&nbsp;&nbsp;// скопируем все свойства user в него
+    									<br>&nbsp;&nbsp;for (let key in user) {
+    									<br>&nbsp;&nbsp;clone[key] = user[key];
+    									<br>&nbsp;&nbsp;}
+    									<br>
+    									<br>&nbsp;&nbsp;// теперь в переменной clone находится абсолютно независимый клон объекта.
+    									<br>&nbsp;&nbsp;clone.name = "Pete";
+    									<br>&nbsp;&nbsp;clone.age = 25 // изменим в нём данные
+    									<br>
+    									<br>&nbsp;&nbsp;alert('Первый объект:' + ' ' +  user.name + ' ' + user.age ); // в оригинальном объекте значение  осталось прежним 
+    									<br>&nbsp;&nbsp;alert('Второй объект:' + ' ' + clone.name + ' ' + clone.age);
+									<br>}
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="copy_ob_1()">Запуск</button>
+							<p>2 метод. Используется метод  Object.assign:</p>
+							<div class="code">
+								<p>
+									Object.assign(dest, [src1, src2, src3...])
+								</p>
+							</div>
+							<p>Аргументы dest, и src1, ..., srcN (может быть столько, сколько нужно) являются объектами. [src1, src2, src3...] копируется в dest. Если есть одинаковые ссылки, то они будут перезаписываться. <br>Копирование</p>
+							<div class="code">
+								<p>
+									let user = {
+  									<br>&nbsp;&nbsp;name: "John",
+  									<br>&nbsp;&nbsp;age: 30
+									<br>};
+									<br>
+									<br>let clone = Object.assign({}, user);
+								</p>
+							</div>
+							<p>Объединение</p>
+							<div class="code">
+								<p>
+									let user = { name: "John" };
+									<br>
+									<br>let permissions1 = { canView: true };
+									<br>let permissions2 = { canEdit: true };
+									<br>
+									<br>// копируем все свойства из permissions1 и permissions2 в user
+									<br>Object.assign(user, permissions1, permissions2);
+									<br>
+									<br>// now user = { name: "John", canView: true, canEdit: true }
+								</p>
+							</div>
+							<p>Следует понимать, что копируются ссылки. То есть если в объекте 1 есть объект 1.1, то копируя объект 1 в объект 2, копируется ссылка на объект 1.1. То есть обхект 2 будет иметь тот же объект 1.1. То есть и объект 1 и объект 2 будут ссылаться на 1 и тот же объект. Можно посмотреть <a href="https://learn.javascript.ru/object#klonirovanie-i-obedinenie-obektov-object-assign">here</a>, в сама низу</p>
 						</p>
 					</div>
 				</div>

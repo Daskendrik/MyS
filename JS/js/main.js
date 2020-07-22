@@ -72,8 +72,70 @@ function showFun() {
     alert( sayHi ); // выведет код функции
 }
 
+function copyOb() {
+    let user = { 
+        name: 'John',
+        age: '20'
+    };
 
-//Раздел задачи/тесты
+    let admin = user; // мы скопировали самы ссылки, еще одного name и age не появились
+
+    alert(user.name + ' ' + admin.age);
+    
+    admin.name = 'Pete'; // изменено по ссылке из переменной "admin"
+    user.age = '50' // изменено по ссылке из переменной "user"
+
+    alert(user.name + ' ' + admin.age); 
+}
+
+function const_ob_1() {
+    const user = {
+        name: "Dashka"
+    }
+
+    user.name = 'Daria'
+    user.age = 26;
+
+    alert(user.name + ' ' + 'возраст' + ' ' + user.age );
+}
+
+function const_ob_2() {
+    const user = {
+        name: "Dashka"
+    }
+    // Дальше ошибка
+    //const user = {
+        //name: "Daria"
+    //}
+
+    //alert(user.name);
+}
+
+function copy_ob_1() {
+    let user = {
+        name: "John",
+        age: 30
+    };
+
+    let clone = {}; // новый пустой объект
+
+    // скопируем все свойства user в него
+    for (let key in user) {
+    clone[key] = user[key];
+    }
+
+    // теперь в переменной clone находится абсолютно независимый клон объекта.
+    clone.name = "Pete";
+    clone.age = 25 // изменим в нём данные
+
+    alert('Первый объект:' + ' ' +  user.name + ' ' + user.age ); // в оригинальном объекте значение  осталось прежним 
+    alert('Второй объект:' + ' ' + clone.name + ' ' + clone.age);
+}
+
+
+
+
+                                                                                //Раздел задачи/тесты
 function les_1() {
     alert("Раз, раз, првоерка связи! :)");
 }
@@ -209,3 +271,150 @@ function les_12() {
     // использование: функции showOk, showCancel передаются в качестве аргументов ask
             ask("Вы согласны?", showOk, showCancel);
         }
+
+function les_14() {
+    // Сравнение объектов
+    // Создадим основной объект
+    let mainOb = {
+        name: 'Daria',
+        age: '26',
+    }
+
+    // Создадим объект, копию главного объекта
+    let ownOb = mainOb;
+    //alert(ownOb == mainOb); //true
+
+    // Создадим объект, у которого параметры будут сслыться на параметры главного объекта
+    let secOb = {
+        s_name: mainOb.name,
+        s_age: mainOb.age
+    }
+    //alert(secOb.s_name + ' ' + secOb.s_age)
+    //alert(secOb == mainOb); //false
+
+    //Создадим объект, и пропишем параметры главного
+    let thOb = {
+        name: 'Daria',
+        age: '26',
+    }
+    //alert(thOb == mainOb); //false
+    alert('Cравнение равенста объектов: \nmainOb и ownOb:' + ' ' + (ownOb == mainOb) + '\nmainOb и secOb:' + ' ' + (secOb == mainOb) + '\nmainOb и thOb:' + ' ' + (thOb == mainOb));
+
+
+
+    // Сравнение внутренностей объектов
+    alert('Cравнение равенста внутренностей(age) объектов: \nmainOb и ownOb:' + ' ' + (mainOb.age == ownOb.age) + '\nmainOb и secOb:' + ' ' + (secOb.age == mainOb.s_age) + '\nmainOb и thOb:' + ' ' + (thOb.age == mainOb.age));
+
+    // изменим значение свойства третьего объекта, чтобы посмотреть, что будет со св-вом главного
+    thOb.age = 50;
+    alert('В третьем объекте св-во age:' + ' ' + thOb.age +  '\nА в первом:' + ' ' + mainOb.age)
+    //а теперь со вторым
+    secOb.s_age = 100;
+    alert('Во втором объекте св-во age:' + ' ' + secOb.s_age +  '\nА в первом:' + ' ' + mainOb.age)
+
+}
+
+function les_15() {
+    function isEmpty(obj) {
+        for (let key in obj) {
+            return false; // Если у нас начинается работать тело, то есть есть хотя бы 1 key (что то в обхекте), то тогда 
+        }
+        return true;
+    }
+    let schedule = {};
+
+    alert( isEmpty(schedule) ); // true
+
+    schedule["8:30"] = "get up";
+
+    alert( isEmpty(schedule) ); // false
+}
+
+function les_16() {
+    function isEmpty(obj) {
+        for (let key in obj) {
+            return false; // Если у нас начинается работать тело, то есть есть хотя бы 1 key (что то в обхекте), то тогда 
+        }
+        return true;
+    }
+    let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130
+    }
+    if (isEmpty(salaries) == false) {
+        let sum = salaries.John + salaries.Ann + salaries.Pete;
+        alert('Сумма всех зарплат равна:' + ' ' + sum)
+    } else {
+        alert('зарплат неть, но вы держитесь')
+    }
+}
+
+function les_16_1() {
+    function isEmpty(obj) {
+        for (let key in obj) {
+            return false; 
+        }
+        return true;
+    }
+    let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130,
+        Daria: 1000,
+    }
+    let sum = 0;
+    if (isEmpty(salaries) == false) {
+        for (let key in salaries) {
+            sum = sum + salaries[key];
+        }
+    } else {
+        alert('зарплат неть, но вы держитесь');
+    }
+    if (isEmpty(salaries) == false) {
+        alert('Сумма всех зарплат равна:' + ' ' + sum);
+    }
+}
+
+function les_17() {
+    let menu = {
+        width: 200,
+        height: 300,
+        title: 'Ширина и высота',
+    }
+    alert('Сначала у нас было так:' + ' ' + menu.title + ' ' + menu.width + ' ' + menu.height )
+    //Проверка пустоты
+    function isFull(obj) {
+        for (let key in obj) {
+            return true; 
+        }
+        return false;
+    }
+    //Проверка числа
+    function isNumber(param) {
+          if (typeof(param) == 'number') {
+            return true;
+          } else {
+            return false;
+          }
+       }
+
+    function multiplyNumeric(obj) {
+        for (let key in obj) {
+            let a = obj[key];
+                if (isNumber(a)) {
+                    a = a * 2;
+                }
+            obj[key] = a;
+        }
+    }
+
+    if (isFull(menu)) {
+        multiplyNumeric(menu);
+        alert('После вызова multiplyNumeric(obj)' + ' ' + menu.title + ' ' + menu.width + ' ' + menu.height);
+    } else {
+        alert('Объект пуст')
+    }
+
+}
+    

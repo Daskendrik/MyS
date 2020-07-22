@@ -223,7 +223,7 @@
 						</p>
 						<hr> <!--Урок 8-->
 						<p>
-							<h4>Урок 8</h4>
+							<h4>Тест 8</h4>
 							<p>Напишите цикл, который предлагает prompt ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее. Цикл должен спрашивать число пока либо посетитель не введёт число, большее 100, либо не нажмёт кнопку Отмена (ESC). Предполагается, что посетитель вводит только числа. Предусматривать обработку нечисловых строк в этой задаче необязательно. Я решила это следующим образом (но возможно и другие решения!):</p>
 							<div class="code">
 								<p>
@@ -242,7 +242,7 @@
 						</p>
 						<hr> <!--Урок 9-->
 						<p>
-							<h4>Урок 9! Важно, часто спрашивают на собеседовании!Вывести простые числа</h4>
+							<h4>Тест 9! Важно, часто спрашивают на собеседовании!Вывести простые числа</h4>
 							<p>Натуральное число, большее 1, называется простым, если оно ни на что не делится, кроме себя и 1. Другими словами, n > 1 – простое, если при его делении на любое число кроме 1 и n есть остаток. Например, 5 это простое число, оно не может быть разделено без остатка на 2, 3 и 4. Напишите код, который выводит все простые числа из интервала от 2 до n. Для n = 10 результат должен быть 2,3,5,7. P.S. Код также должен легко модифицироваться для любых других интервалов.</p>
 							<p>Это было долго и мучительно, но у меня вроде получилось!</p>
 							<div class="code">
@@ -263,7 +263,7 @@
 						</p>
 						<hr> <!--Урок 10-->
 						<p>
-							<h4>Урок 10. Родительский контроль</h4>
+							<h4>Тест 10. Родительский контроль</h4>
 							<div class="code">
 								<p>
 									function checkAge(age) {
@@ -285,7 +285,7 @@
 						</p>
 						<hr> <!--Урок 11-->
 						<p>
-							<h4>Урок 11.</h4>
+							<h4>Тест 11.</h4>
 							<p>Напишите функцию min(a,b), которая возвращает меньшее из чисел a и b. Довольно интересно, у меня получилось с первого раза! По кнопке мы вызываем les_11()</p>
 							<div class="code">
 								<p>
@@ -309,7 +309,7 @@
 						</p>
 						<hr> <!--Урок 12-->
 						<p>
-							<h4>Урок 12</h4>
+							<h4>Тест 12</h4>
 							<p>Наша функция должна задать вопрос question и, в зависимости от того, как ответит пользователь, вызвать yes() или no():</p>
 							<div class="code">
 								<p>
@@ -345,7 +345,7 @@
 						</p>
 						<hr> <!--Урок 13-->
 						<p>
-							<h4>Урок 13</h4>
+							<h4>Тест 13</h4>
 							<p>Пример использования объекта и обращения к нему</p>
 							<div class="code">
 								<p>
@@ -361,6 +361,152 @@
 								</p>
 							</div>
 							<button type="button" class="btn btn-outline-primary" onclick="les_13()">Запуск</button>
+						</p>
+						<hr> <!--Урок 14-->
+						<p>
+							<h4>Тест 14. Сравнение объектов/ссылок/св-тв.</h4>
+							<p>Сравним объекты. Довольно сложно понять. Два объекта равны только в том случае, если это один и тот же объект. - с этим можно согласиться.</p>
+							<div class="code">
+								<p>
+									let mainOb = {
+        							<br>&nbsp;&nbsp;name: 'Daria',
+        							<br>&nbsp;&nbsp;age: '26',
+    								<br>}
+
+    								<br>// Создадим объект, копию главного объекта
+    								<br>let ownOb = mainOb;
+    								<br>//alert(ownOb == mainOb); //true
+
+    								<br>// Создадим объект, у которого параметры будут сслыться на параметры главного объекта
+    								<br>let secOb = {
+        							<br>&nbsp;&nbsp;s_name: mainOb.name,
+        							<br>&nbsp;&nbsp;s_age: mainOb.age
+    								<br>}
+    								<br>//alert(secOb.s_name + ' ' + secOb.s_age)
+    								<br>//alert(secOb == mainOb); //false
+
+    								<br>//Создадим объект, и пропишем параметры главного
+    								<br>let thOb = {
+        							<br>&nbsp;&nbsp;name: 'Daria',
+        							<br>&nbsp;&nbsp;age: '26',
+    								<br>}
+    								<br>//alert(thOb == mainOb); //false
+    								<br>alert('Cравнение равенста объектов: \nmainOb и ownOb:' + ' ' + (ownOb == mainOb) + '\nmainOb и secOb:' + ' ' + (secOb == mainOb) + '\nmainOb и thOb:' + ' ' + (thOb == 	mainOb))
+
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_14()">Запуск</button>
+							<p>Мы видим, что равны только первые 2 объекта, так как они копии.</p>
+							<p>Сравним теперь значения, добавим к коду:</p>
+							<div class="code">
+								<p>
+									alert('Cравнение равенста внутренностей(age) объектов: \nmainOb и ownOb:' + ' ' + (mainOb.age == ownOb.age) + '\nmainOb и secOb:' + ' ' + (secOb.age == mainOb.age) + '\nmainOb и thOb:' + ' ' + (thOb.age == mainOb.age));
+								</p>
+							</div>
+							<p>Так как первый объект - копия главного, они естественно равны.Со вторым равны, потому что мы присвоили св-ву значение св-ва главного объекта, c третьем равны, так как мы там присвоили те же значения св-свт.</p>
+							<p>Что же происходит, когда мы создаем secOb и thOb, почему они (объекты) не равны, хотя вроде должны были бы, значения и имена св-ва равны. Поменяем значение одного из свойств thOb и посмотрим, изменилось ли такое же свойство в главном объекте. Добавим в конце:</p>
+							<div class="code">
+								<p>
+									// изменим значение свойства третьего объекта, чтобы посмотреть, что будет со св-вом главного
+									<br>thOb.age = 50;
+    								<br>alert('В третьем объекте св-во age:' + ' ' + thOb.age +  '\nА в первом:' + ' ' + mainOb.age)
+    								<br>//а теперь со вторым
+    								<br>secOb.s_age = 100;
+    								<br>alert('Во втором объекте св-во age:' + ' ' + secOb.s_age +  '\nА в первом:' + ' ' + mainOb.age)
+								</p>
+							</div>
+							<p>И так... получается муть.</p>
+						</p>
+						<hr> <!--Урок 15-->
+						<p>
+							<h4>Урок 15</h4>
+							<p>Проверим объект на пустоту. <br>Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.</p>
+							<div class="code">
+								<p>
+									function les_15() {
+    									<br>&nbsp;&nbsp;function isEmpty(obj) {
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;for (let key in obj) {
+            									<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false; // Если у нас начинается работать тело, то есть есть хотя бы 1 key (что то в обхекте), то тогда значит, что объект не пустой
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;return true;
+    									<br>&nbsp;&nbsp;}
+    									<br>&nbsp;&nbsp;let schedule = {};
+									<br>
+    									<br>&nbsp;&nbsp;alert( isEmpty(schedule) ); // true
+									<br>
+    									<br>&nbsp;&nbsp;schedule["8:30"] = "get up";
+									<br>
+    									<br>&nbsp;&nbsp;alert( isEmpty(schedule) ); // false
+									<br>}
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_15()">Запуск</button>
+						</p>
+						<hr> <!--Урок 16-->
+						<p>
+							<h4>Сумма свойств объекта</h4>
+							<p>У нас есть объект, в котором хранятся зарплаты нашей команды.Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390. Если объект salaries пуст, то результат должен быть 0. <br>Если по простетски, то так:  </p>
+							<div class="code">
+								<p>
+									function les_16() {
+    								<br>&nbsp;&nbsp;function isEmpty(obj) {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;for (let key in obj) {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false; 
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;return true;
+    								<br>&nbsp;&nbsp;}
+    								<br>&nbsp;&nbsp;let salaries = {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;John: 100,
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;Ann: 160,
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;Pete: 130
+    								<br>&nbsp;&nbsp;}
+    								<br>&nbsp;&nbsp;if (isEmpty(salaries) == false) {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;let sum = salaries.John + salaries.Ann + salaries.Pete;
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;alert('Сумма всех зарплат равна:' + ' ' + sum)
+    								<br>&nbsp;&nbsp;} else {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;alert('зарплат неть, но вы держитесь')
+    								<br>&nbsp;&nbsp;}
+								<br>}
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_16()">Запуск</button>
+							<p>Теперь напишем так, как будто мы не знаем, сколько свойств в объекте.</p>
+							<div class="code">
+								<p>
+									function les_16_1() {
+    								<br>&nbsp;&nbsp;function isEmpty(obj) {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;for (let key in obj) {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false; 
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;return true;
+    								<br>&nbsp;&nbsp;}
+    								<br>&nbsp;&nbsp;let salaries = {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;John: 100,
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;Ann: 160,
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;Pete: 130,
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;Daria: 1000,
+    								<br>&nbsp;&nbsp;}
+    								<br>&nbsp;&nbsp;let sum = 0;
+    								<br>&nbsp;&nbsp;if (isEmpty(salaries) == false) {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;for (let key in salaries) {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum = sum + salaries[key];
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+    								<br>&nbsp;&nbsp;} else {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;alert('зарплат неть, но вы держитесь');
+    								<br>&nbsp;&nbsp;}
+    								<br>&nbsp;&nbsp;if (isEmpty(salaries) == false) {
+        								<br>&nbsp;&nbsp;&nbsp;&nbsp;alert('Сумма всех зарплат равна:' + ' ' + sum);
+    								<br>&nbsp;&nbsp;}
+								<br>}
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_16_1()">Запуск</button>
+						</p>
+						<hr> <!--Урок 17-->
+						<p>
+							<h4>Урок 17</h4>
+							<p>Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.</p>
+							<button type="button" class="btn btn-outline-primary" onclick="les_17()">Запуск</button>
 						</p>
 					</div>
 				</div>
