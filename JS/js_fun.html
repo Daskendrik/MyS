@@ -28,7 +28,7 @@
 			<div class="row" style="background: #FFBF00; border: solid;">
 				<div class="col col-12">
 				<h1 style="text-align: center;">Краткий справочник JS</h3>
-				<p style="text-align: right;">Языки/JS/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				<p style="text-align: right;">Языки/JS/Функции</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
 				</div>
 			</div>
 																					<!--верхние кнопки -->
@@ -90,7 +90,30 @@
 			<div class="col col-lg-11" >
 				<div class="row" style="height: 100%; border: ridge;">
 							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid" >
-								<p style="text-align: center;">Тут пока ничего не будет</p>
+								<p style="text-align: center;color: blue; font-size: 18px ">Структура раздела</p>
+								<p><a style="color: blue" href="#Встроенные функции">Встроенные функции/операторы</a></p>
+								<ul>
+									<p>
+										<li><a style="color: blue" href="#alert">alert</a></li>
+										<li><a style="color: blue" href="#prompt">prompt</a></li>
+										<li><a style="color: blue" href="#confirm">confirm</a></li>
+										<li><a style="color: blue" href="#typeof">Оператор typeof</a></li>
+									</p>
+								</ul>
+								<p><a style="color: blue" href="#Функции">Функции</a></p>
+								<ol>
+									<p>
+										<li><a style="color: blue" href="#Function Declaration">Function Declaration</a></li>
+										<ul>
+											<li><a style="color: blue" href="#Параметры по умолчанию">Параметры по умолчанию</a></li>
+											<li><a style="color: blue" href="#Возврат значения">Возврат значения</a></li>
+											<li><a style="color: blue" href="#Имя функции">Имя функции</a></li>
+										</ul>
+										<li><a style="color: blue" href="#Function Expression">Function Expression</a></li>
+									</p>
+								</ol>
+								<p><a style="color: blue" href="#колбэки">Колбэки</a></p>
+								<p><a style="color: blue" href="#стрелки">Стрелки</a></p>
 							</div>
 							<div  style="background: #FAEEDD;; width: 35px;  position: relative; display: inline-block;">
 									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
@@ -99,9 +122,9 @@
 
 																													<!--Начало главного блока-->
 					<div class="col" style="background: #FAEEDD; ">
-						<h2>Встроенные функции</h2>
-						<p>Тут добавлю, что если нам необходимо использовать при алерте именно значение переменной, необходимо писать так:</p>
-						<h4>alert. <span style="color: red">ДОПИСАТЬ О ТОМ, КАК ПИСАТЬ ЗНАЧЕНИЯ,СТРОКИ,ВСЕ ВМЕСТЕ, ПЕРЕНОС СТРОК!</span></h4>
+						<h2><a id="Встроенные функции" name="Встроенные функции">Встроенные функции и операторы</a></h2>
+						<p>Фкнции это тоже операторы, но для себя их все таки отделяю.</p>
+						<h4><a id="alert" name="alert">alert</a> <span style="color: red">ДОПИСАТЬ О ТОМ, КАК ПИСАТЬ ЗНАЧЕНИЯ,СТРОКИ,ВСЕ ВМЕСТЕ, ПЕРЕНОС СТРОК!</span></h4>
 						<p>Этот код отобразит окно в браузере и приостановит дальнейшее выполнение скриптов до тех пор, пока пользователь не нажмёт кнопку «OK». От себя добавлю, что скобки должны быть впритык к слову алерт! Шаблончик такой:</p>
 						<div class="code">
 							<p>alert(message);</p>
@@ -114,7 +137,7 @@
 						</div>
 						<button type="button" class="btn btn-outline-primary" onclick="alert_1()">Запуск</button>
 						<hr>
-						<h4>prompt</h4>
+						<h4><a id="prompt" name="prompt">prompt</a></h4>
 						<p>Этот код отобразит модальное окно с текстом, полем для ввода текста и кнопками OK/Отмена. Шаблончик такой:</p>
 						<div class="code">
 							<p>result = prompt(title, [default]);</p>
@@ -131,7 +154,7 @@
 						</div>
 						<button type="button" class="btn btn-outline-primary" onclick="prompt_1()">Запуск</button>
 						<hr>
-						<h4>confirm</h4>
+						<h4><a id="confirm" name="confirm">confirm</a></h4>
 						<p>Функция confirm отображает модальное окно с текстом вопроса question и двумя кнопками: OK и Отмена.
 							<br>Результат true, если нажата кнопка OK. В других случаях – false.
 							<br>Шаблончик:</p>
@@ -141,16 +164,22 @@
 						<p>Получается, что значение переменной присваевает пользователь, в данном случае, это true или false.</p>
 						<div class="code">
 							<p>
-								<p>let age = prompt('Сколько тебе лет?', 100);
-								<br>alert(`Тебе ${age} лет!`); // Тебе 100 лет!</p>
+								<p>let isBoss = confirm("Дашка главная?");
+    							<br>alert( isBoss ); // true, если нажата OK</p>
 							</p>
 						</div>
 						<button type="button" class="btn btn-outline-primary" onclick="confirm_1()">Запуск</button>
+						<h4><a id="typeof" name="typeof">typeof</a></h4>
+							<p>Этот оператор возвращает тип аргумента. Тип проверка:</p>
+							<div class="code"><p>
+								let a = 15
+								<br>alert (typeof a) //нам выведет, что это число</p>
+							</div>
 						<hr><!--Функции-->
 						<p>
-							<h2>Функции. Основы</h2>
+							<h2><a id="Функции" name="Функции">Функции</a></h2>
 							<p>Функции являются основными «строительными блоками» программы. Сущестует 2  вида объявления функций: Function Declaration и  Function Expression. </p>
-							<h3>Function Declaration  (Объявление Функции)</h3>
+							<h3><a id="Function Declaration" name="Function Declaration">Function Declaration  (Объявление Функции)</a></h3>
 							<p> Конструкция функции выглядит так:</p>
 							<div class="code">
 								<p>
@@ -170,7 +199,9 @@
 								</p>
 							</div>
 							<button type="button" class="btn btn-outline-primary" onclick="showMessage('Дашка', 'Привет незнакомец!')">Запуск</button>
-							<p>Если в функции что то делается с аргументом, то эти изменения за пределы функции не уйдут. <br><h4>Параметры по умолчанию</h4> нужны в том случае, если мы не передаем параметр. При чем мы можем передавать как значение, так и вызывать другую функцию. Например:</p>
+							<p>Если в функции что то делается с аргументом, то эти изменения за пределы функции не уйдут. </p>
+							<h4><a id="Параметры по умолчанию" name="Параметры по умолчанию">Параметры по умолчанию</h4>
+							<p>нужны в том случае, если мы не передаем параметр. При чем мы можем передавать как значение, так и вызывать другую функцию. Например:</p>
 							<div class="code">
 								<p>
 								function showMessage(from, text = anotherFunction()) { // или text = "текст не добавлен"
@@ -179,7 +210,7 @@
 								<br>}
 								</p>
 							</div>
-							<h4>Возврат значения</h4> 
+							<h4><a id="Возврат значения" name="Возврат значения">Возврат значения</h4> 
 							<p>Функция может вернуть результат, который будет передан в вызвавший её код. Например:</p>
 							<div class="code">
 								<p>
@@ -192,9 +223,9 @@
 								</p>
 							</div>
 							<p>Директива return может находиться в любом месте тела функции. Как только выполнение доходит до этого места, функция останавливается, изначение возвращается в вызвавший её код (присваивается переменной result выше). Пример можно глянуть в примерах, номер 10.</p>
-							<h4>Как подобрать имя функции</h4>
-							<p>Название функции - глагол+предмет, надо которым совершается действие.</p>
-							<h3>Function Expression (Функциональное Выражение)</h3>
+							<h4><a id="Имя функции" name="Имя функции">Как подобрать имя функции</a></h4>
+							<p>Название функции - глагол+предмет, над которым совершается действие.</p>
+							<h3><a id="Function Expression" name="Function Expression">Function Expression (Функциональное Выражение)</a></h3>
 							<p>Не знаю как точно описать, но получчается, что мы создаем переменную и ей присваеваем новосозданную функцию. Например, создаим переменную и функцию:</p>
 							<div class="code">
 								<p>
@@ -229,9 +260,9 @@
 							<p>Объявление Function Declaration (1) создало функцию и присвоило её значение переменной с именем sayHi.
 								<br>В строке (2) мы скопировали её значение в переменную func. Обратите внимание (ещё раз): нет круглых скобок после sayHi. <b>Если бы они были, то выражение func = sayHi() записало бы результат вызова sayHi() в переменную func, а не саму функцию sayHi.</b>
 								<br>Теперь функция может быть вызвана с помощью обеих переменных sayHi() и func().</p>
-							<h3>Функциями-колбэки или просто колбэки</h3>
+							<h3><a id="колбэки" name="колбэки">Функциями-колбэки или просто колбэки</a></h3>
 							<p>Ключевая идея в том, что мы передаём функцию и ожидаем, что она вызовется обратно (от англ. «call back» – обратный вызов) когда-нибудь позже, если это будет необходимо. Пример такой функции урок 12.</p>
-							<h4>Фнкции стрелки</h4>
+							<h4><a id="стрелки" name="стрелки">Функции стрелки</a></h4>
 							<p>Довольно инетересно. Самый коротки синтаксис создания функции - функции стрелки. Шаблон:</p>
 							<div class="code">
 								<p>
