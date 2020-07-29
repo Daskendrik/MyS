@@ -441,4 +441,22 @@ function les_18() {
     alert( calculator.sum() );
     alert( calculator.mul() );
 }
-    
+
+function les_19() {
+    function Accumulator(startingValue) {
+        this.value = startingValue,
+
+        this.read = function() {
+            let a = prompt('На сколько прибавить?', 0);
+            this.value = this.value + +a;
+            // или одной строчкой this.value += +prompt('Сколько нужно добавить?', 0);
+        }
+    }
+
+    let accumulator = new Accumulator(1); // начальное значение 1
+
+    accumulator.read(); // прибавит ввод prompt к текущему значению
+    accumulator.read(); // прибавит ввод prompt к текущему значению
+
+    alert(accumulator.value); // выведет сумму этих значений
+}

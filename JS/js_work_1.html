@@ -100,6 +100,7 @@
 																													<!--Начало главного блока-->
 					<div class="col" style="background: #FAEEDD; ">
 						<!--Урок 18-->
+						<hr>
 						<p>
 							<h4>Тест 18</h4>
 							<p>Создайте калькулятор <br>Создайте объект calculator (калькулятор) с тремя методами:
@@ -133,6 +134,37 @@
 								</p>
 							</div>
 							<button type="button" class="btn btn-outline-primary" onclick="les_18()">Запуск</button>
+						</p>
+						<hr>
+						<!--Урок 19-->
+						<p>
+							<h4>Урок 19</h4>
+							<p>Напишите функцию-конструктор Accumulator(startingValue).
+							<br>Объект, который она создаёт, должен уметь следующее:
+							<li>Хранить «текущее значение» в свойстве value. Начальное значение устанавливается в аргументе конструктора startingValue.
+							<li>Метод read() использует prompt для получения числа и прибавляет его к свойству value.
+							<br>Таким образом, свойство value является текущей суммой всего, что ввёл пользователь при вызовах метода read(), с учётом начального значения startingValue.</p>
+							<div class="code">
+								<p>
+									 function Accumulator(startingValue) {
+        								<br>&nbsp;&nbsp;this.value = startingValue,
+									<br>
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;this.read = function() {
+            									<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let a = prompt('На сколько прибавить?', 0);
+            									<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this.value = this.value + +a;
+            									<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// или одной строчкой this.value += +prompt('Сколько нужно добавить?', 0);
+        									<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+    									<br>&nbsp;&nbsp;}
+    									<br>
+    									<br>&nbsp;&nbsp;let accumulator = new Accumulator(1); // начальное значение 1
+    									<br>
+    									<br>&nbsp;&nbsp;accumulator.read(); // прибавит ввод prompt к текущему значению
+    									<br>&nbsp;&nbsp;accumulator.read(); // прибавит ввод prompt к текущему значению
+    									<br>
+    									<br>&nbsp;&nbsp;alert(accumulator.value); // выведет сумму этих значений
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_19()">Запуск</button>
 						</p>
 					</div>
 				</div>
