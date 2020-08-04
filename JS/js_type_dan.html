@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>JS.Методы типов данных</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+    												<!--скрипт определения метонахождения-->
+    <script type="text/javascript">$(function () {  
+    $('.menu a').each(function () { 
+        var location = window.location.href; 
+        var link = this.href;  
+        if(location == link) { 
+            $(this).addClass('mainmenu_a');
+            $(this).addClass('col');
+            $(this).removeClass('mainmenu_n');
+            $(this).removeClass('col-lg-6');
+        }
+        });
+    });
+    </script>
+</head>
+<body style=" background: #FFEB73">
+	<div class="container" > 
+			<div class="row" style="background: #FFBF00; border: solid;">
+				<div class="col col-12">
+				<h1 style="text-align: center;">Краткий справочник JS</h3>
+				<p style="text-align: right;">Языки/JS/Методы типов данных</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				</div>
+			</div>
+																					<!--верхние кнопки -->
+			<div class="row" style="background: #FFBF00; border-bottom: dotted; border-right: dotted; border-left: dotted">
+										
+									<div class = "col col-12" style="text-align: center; margin: 1% ">
+									<a href="../index.html"><button class="btn btn-dark">Вернуться на главную страницу</button></a>
+								</div>
+			</div>
+
+		<div class="row " style="min-height: 750px ">
+
+																					<!--Меню -загладка -->
+			<div class="col col-lg-1 menu">
+										<div class="row justify-content-end" style="height: 150px; ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_start.html">
+													<div class="mainmenutext">Введение</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_main.html" >
+												<div class="mainmenutext">Основы</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_fun.html">
+												<div class="mainmenutext">Фнукции</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_ob.html">
+												<div class="mainmenutext">Объект</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_1_table.html">
+												<div class="mainmenutext">Анимация</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_work.html">
+												<div class="mainmenutext">Тренеровка</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_must_know.html">
+												<div class="mainmenutext">Особенности</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_something.html">
+												<div class="mainmenutext">Другое</div>
+											</a>
+										</div>
+			</div>
+																					<!--Меню -загладка -->
+	
+
+			<div class="col col-lg-11" >
+				<div class="row" style="height: 100%; border: ridge;">
+							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid" >
+								<p style="text-align: center;">Тут пока ничего не будет</p>
+							</div>
+							<div  style="background: #FAEEDD;; width: 35px;  position: relative; display: inline-block;">
+									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
+									<img id="block" src="img/arrow-bar-right.svg" alt="" style="width: 100%; display: none;" onclick="(document.getElementById('sec_menu').style.display='block', document.getElementById('hide').style.display='block', document.getElementById('block').style.display='none' )"></img>
+							</div>
+
+																													<!--Начало главного блока-->
+					<div class="col" style="background: #FAEEDD; ">
+						<p>
+							<h1>Методы разных типов данных</h1>
+							<h4>Числа</h4>
+							<p>
+								<b>Способы записи числа</b> - <b>e</b> в числе это 10^x. То есть, 1е9 это 1 * 10^9 = 1 000 000 000 . Примеры:
+									<li>7.3e9 = 7 300 000 000 (один ноль ушел на точку)</li>
+									<li>1.23е6 = 1 230 000</li>
+									<li>1е-6 = 0,000 001</li>
+								<br><b>toString(base)</b> - метод, который возвращает строковое представление числа в систему base, по умолчанию 10 (2,8,16 ... 36 -тиричную систему). Примеры (let num = 255;):
+									<li>alert( num.toString(16) );  // ff</li>
+									<li>alert( num.toString(2) );   // 11111111</li>
+								<br><b>Округления</b> - существет много способов округления. Примеры (let num = 3.6;): <span style="color: red">(МОЖНО БУДЕТ НАПИСАТЬ ПРОГУ!)</span>
+									<li>Math.floor - Округление в меньшую сторону <br>Math.floor(num) - 3</li>
+									<li>Math.ceil- Округление в большую сторону <br>Math.ceil(num) - 4</li>
+									<li>Math.round - Округление до ближайшего целого <br>Math.round(num) - 4</li>
+									<li>Math.trunc - Производит удаление дробной части без округления <br>Math.trunc(num) - 3</li>
+									<li>toFixed(n) - округляет число до n знаков после запятой и возвращает <b>строковое</b> представление результата <br>num.toFixed(1) - 3.6</li>
+								<br><b>isNaN(value)</b> - преобразует значение в число и проверяет является ли оно NaN. Пример:
+									<li>alert( isNaN("str") ); // true (является ли "str" NaN?)</li>
+								<br><b>isFinite(value)</b> - преобразует аргумент в число и возвращает true, если оно является обычным числом, т.е. не NaN/Infinity/-Infinity. Пример:
+									<li>alert( isFinite("15") ); // true</li>
+								<br><b>+ или Number()</b> - преобразует к числу, только если строка является в точности числом(Единственное исключение — это пробелы в начале строки и в конце, они игнорируются). Например:
+									<li>alert(+"100") // 100</li>
+								<br><b>parseInt</b> - читает число из строки (если число стоит на 1 месте), возвращается целое число. Имеет необязательный второй параметр. Он определяет систему счисления, таким образом parseInt может также читать строки с шестнадцатеричными числами, двоичными числами и т.д. Пример:
+									<li>alert( parseInt('12.3') ); // 12, вернётся только целая часть</li>
+									<li>alert( parseInt('0xff', 16) ); // 255</li>
+								<br><b>parseFloat</b> - читает число из строки (если число стоит на 1 месте), возвращает число с плавающей точкой. Пример:
+									<li>alert( parseFloat('12.5em') ); // 12.5</li>
+								<br><b>Math.random()</b> - возвращает псевдослучайное число в диапазоне от 0 (включительно) до 1 (но не включая 1). Пример:
+									<li>alert( Math.random() ); // 0.1234567894322</li>
+								<br><b>Math.max(a, b, c...) / Math.min(a, b, c...)</b> - возвращает наибольшее/наименьшее число из перечисленных аргументов. Пример:
+									<li>alert( Math.max(3, 5, -10, 0, 1) ); // 5</li>
+								<br><b>Math.pow(n, power)</b> - возвращает число n, возведённое в степень power. Пример:
+									<li>alert( Math.pow(2, 10) ); // 2 в степени 10 = 1024</li>
+							</p>
+							<h4>Методы для всего</h4>
+							<p>
+								<b>Object.is</b> - сравнивает значения примерно как ===, но более надёжен. Пример:
+								<li>Object.is(2, 2) //true</li>
+							</p>
+							
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class = "col-12" style="background: #FFBF00; border: dotted;">
+			<p style="text-align: center;">ЭТО ДНИЩЕ САЙТА </p>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
