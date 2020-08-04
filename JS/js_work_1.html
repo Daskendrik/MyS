@@ -165,6 +165,33 @@
 								</p>
 							</div>
 							<button type="button" class="btn btn-outline-primary" onclick="les_19()">Запуск</button>
+							<hr>
+							<!--Урок 20-->
+							<h4>Урок 20</h4>
+							<p>Создайте функцию readNumber, которая будет запрашивать ввод числового значения до тех пор, пока посетитель его не введёт. Функция должна возвращать числовое значение. Также надо разрешить пользователю остановить процесс ввода, отправив пустую строку или нажав «Отмена». В этом случае функция должна вернуть null.
+								<br>Мое решение капец какое, второе решение есть вот <a href="https://learn.javascript.ru/number#vvod-chislovogo-znacheniya">тут</a></p>
+							<div class="code">
+								<p>
+    								function readNumber() {
+        								<br>&nbsp;&nbsp;let num = {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;a: undefined,
+        								<br>&nbsp;&nbsp;}
+        
+
+        								<br>&nbsp;&nbsp;do {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;num.a = prompt('Введите число');
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;if (num.a == undefined || num.a == '') {
+                								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 'NuN';
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;if (isFinite(num.a)) {
+                								<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return num.a;
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+        								<br>&nbsp;&nbsp;} while (!isFinite(num.a))
+    								<br>}
+    								<br>alert(readNumber())
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_20()">Запуск</button>
 						</p>
 					</div>
 				</div>

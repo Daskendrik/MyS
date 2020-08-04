@@ -460,3 +460,25 @@ function les_19() {
 
     alert(accumulator.value); // выведет сумму этих значений
 }
+
+function les_20() {
+    
+    function readNumber() {
+        //let a = prompt('Введите число');
+        let num = {
+            a: undefined,
+        }
+        
+
+        do {
+            num.a = prompt('Введите число');
+            if (num.a == undefined || num.a == '') {
+                return 'NuN';
+            }
+            if (isFinite(num.a)) {
+                return num.a;
+            }
+        } while (!isFinite(num.a))
+    }
+    alert(readNumber())
+}
