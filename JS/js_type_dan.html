@@ -100,7 +100,7 @@
 					<div class="col" style="background: #FAEEDD; ">
 						<p>
 							<h1>Методы разных типов данных</h1>
-							<h4>Числа</h4>
+							<h4 style="color: blue">Числа</h4>
 							<p>
 								<b>Способы записи числа</b> - <b>e</b> в числе это 10^x. То есть, 1е9 это 1 * 10^9 = 1 000 000 000 . Примеры:
 									<li>7.3e9 = 7 300 000 000 (один ноль ушел на точку)</li>
@@ -133,7 +133,92 @@
 								<br><b>Math.pow(n, power)</b> - возвращает число n, возведённое в степень power. Пример:
 									<li>alert( Math.pow(2, 10) ); // 2 в степени 10 = 1024</li>
 							</p>
-							<h4>Методы для всего</h4>
+							<h4 style="color: blue">Строки</h4>
+							<p>
+								<a href="https://learn.javascript.ru/string">Инфа</a>
+								<br><b>Кавычки</b> - создают строковые данные. Примеры:
+								<li>let single = 'single-quoted'; //одинарные кавычки</li>
+								<li>let double = "double-quoted"; //двойные кавычки</li>
+								<li>let backticks = `backticks`; //обратные кавычки</li>
+								<b>Обрытные кавычки</b> - в такую строку мы сможем вставлять произвольные выражения, обернув их в ${…}. Ещё одно преимущество обратных кавычек — они могут занимать более одной строки. Пример:
+								<li>alert(`1 + 2 = ${sum(1, 2)}.`); // 1 + 2 = 3. sum(a, b) - функция суммы</li>
+								<b>Спец-символы</b> используются для переноса строки или табуляции, перечень всех:
+								<li>\n - Перевод строки</li>
+								<li>\r - Возврат каретки: самостоятельно не используется. В текстовых файлах Windows для перевода строки используется комбинация символов \r\n.</li>
+								<li>\' \" - Кавычки</li>
+								<li>\\ - Обратный слеш</li>
+								<li>\t - Знак табуляции</li>
+								<li>\xXX - Символ с шестнадцатеричным юникодным кодом XX, например, '\x7A' — то же самое, что 'z'</li>
+								<li>\uXXXX - Символ в кодировке UTF-16 с шестнадцатеричным кодом XXXX, например, \u00A9 — юникодное представление знака копирайта, ©. Код должен состоять ровно из 4 шестнадцатеричных цифр.</li>
+								<b>Длина строки</b> - Свойство length содержит длину строки. Пример:
+								<li>alert( `My\n`.length ); // 3</li>
+								<li><b>length — это свойство</b></li>
+								<b>Доступ к символам</b> - Получить символ, который занимает позицию pos, можно с помощью квадратных скобок: [pos]. Также можно использовать метод charAt: str.charAt(pos). <b>Первый символ занимает нулевую позицию</b>. Примеры (let str = `Hello`;):
+								<li>alert( str[0] ); // H наиболее актуальный вариант</li>
+								<li>alert( str.charAt(0) );</li>
+								<li>alert( str[str.length - 1] ); // o получаем последний символ</li>
+								<li>Также можно перебрать строку посимвольно, используя for..of
+									<details>
+  										<div class="code">
+  											<p>
+  												for (let char of "Hello") {
+  											<br>alert(char); // H,e,l,l,o (char — сначала "H", потом "e", потом "l" и т. д.)
+											<br>}
+  												
+  											</p>
+  										</div>
+									</details>
+								</li>
+								<b>Строки неизменяемы</b> - Содержимое строки в JavaScript нельзя изменить. Нельзя взять символ посередине и заменить его. Как только строка создана — она такая навсегда.
+								<br><b>Изменение регистра</b> - регистр (заглавная или маленькая) меняется 2 методами  toLowerCase() и toUpperCase(). Пример:
+								<li>alert( 'Interface'.toUpperCase() ); // INTERFACE</li> 
+								<li>alert( 'Interface'.toLowerCase() ); // interface</li>
+								<li>alert( 'Interface'[0].toLowerCase() ); // 'i' Если мы захотим перевести в нижний регистр какой-то конкретный символ</li>
+								<b>Поиск подстроки</b>.Существует несколько способов поиска подстроки: str.indexOf(substr, pos), str.lastIndexOf(substr, position) . Пример (let str = 'Widget with id')
+								<li> str.indexOf
+									<br>alert( str.indexOf('Widget') ); // 0, потому что подстрока 'Widget' найдена в начале
+									<br>alert( str.indexOf("id") ); // 1, подстрока "id" найдена на позиции 1 (..idget with id)
+									<br>alert( str.indexOf('id', 2) ) // 12 (второй параметр задает с какого символа начать)</li>
+								<li>str.lastIndexOf(substr, position) - ищет с конца строки к её началу</li>
+								<li>str.includes(substr, pos) - возвращает true, если в строке str есть подстрока substr, либо false, если нет.
+									<br>alert( "Widget with id".includes("Widget") ); // true
+									<br>alert( "Midget".includes("id", 3) ); // false, поиск начат с позиции 3
+								</li>
+								<li>str.startsWith и str.endsWith  - проверяют, соответственно, начинается ли и заканчивается ли строка определённой строкой
+									<br>alert( "Widget".startsWith("Wid") ); // true, "Wid" — начало "Widget"
+									<br>alert( "Widget".endsWith("get") ); // true, "get" — окончание "Widget"
+								</li>
+								<b>Получение подстроки</b> есть 3 метода для получения подстроки: substring, substr и slice.
+								<li>str.slice(start [, end]) - Возвращает часть строки от start до (не включая) end. (let str = "stringify";)
+									 <br>alert( str.slice(0, 5) ); // 'strin', символы от 0 до 5 (не включая 5)
+									 <br>alert( str.slice(0, 1) ); // 's', от 0 до 1, не включая 1, т. е. только один символ на позиции 0
+									 <br>alert( str.slice(2) ); // ringify, с позиции 2 и до конца
+									 <br>alert( str.slice(-4, -1) ); // gif начинаем с позиции 4 справа, а заканчиваем на позиции 1 справа
+								</li>
+								<li>str.substring(start [, end]) - Возвращает часть строки между start и end. (let str = "stringify";)
+									<br>alert( str.substring(2, 6) ); // "ring"
+									<br>alert( str.substring(6, 2) ); // "ring"
+								</li>
+								<li>str.substr(start [, length]) - Возвращает часть строки от start длины length.
+									<br>alert( str.substr(2, 4) ); // ring, получаем 4 символа, начиная с позиции 2
+								</li>
+								<b>Сравнение строк (значения строк в цифрах)</b>
+								<p>Символы сравниваются по их кодам.</p>
+								<li>str.codePointAt(pos) - Возвращает код для символа, находящегося на позиции pos:
+									<br>alert( "z".codePointAt(0) ); // 122
+									<br>alert( "Z".codePointAt(0) ); // 90
+								</li>
+								<li>String.fromCodePoint(code) - Создаёт символ по его коду code
+									<br>alert( String.fromCodePoint(90) ); // Z
+								</li>
+								<li>str.localeCompare(str2)  - возвращает число, которое показывает, какая строка больше в соответствии с правилами языка (отрицательно число - меньше, положительное - больше, 0 равны)
+									<br>alert( 'Österreich'.localeCompare('Zealand') ); // -1
+								</li>
+								<b>Дополнительно</b>
+								<li>str.trim() -  убирает пробелы в начале и конце строки.</li>
+								<li>str.repeat(n) — повторяет строку n раз.</li>
+							</p>
+							<h4 style="color: blue">Методы для всего</h4>
 							<p>
 								<b>Object.is</b> - сравнивает значения примерно как ===, но более надёжен. Пример:
 								<li>Object.is(2, 2) //true</li>
