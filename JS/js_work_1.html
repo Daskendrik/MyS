@@ -191,7 +191,52 @@
     								<br>alert(readNumber())
 								</p>
 							</div>
+
 							<button type="button" class="btn btn-outline-primary" onclick="les_20()">Запуск</button>
+							<hr>
+							<!--Урок 21-->
+							<h4>Тест 21. Проверка на спам</h4>
+							<p>Напишите функцию checkSpam(str), возвращающую true, если str содержит 'viagra' или 'XXX', а иначе false</p>
+							<div class="code">
+								<p>
+									function checkSpam(str) {
+        								<br>&nbsp;&nbsp;let a = str.toLowerCase();
+        								<br>&nbsp;&nbsp;if (a.includes("viagra") ||  a.includes("xxx")) {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;alert('true');
+        								<br>&nbsp;&nbsp;} else {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;alert('false');
+        								<br>&nbsp;&nbsp;}
+    								<br>}
+
+    								<br>checkSpam('buy ViAgRA now') //== true
+    								<br>checkSpam('free xxxxx') //== true
+    								<br>checkSpam("innocent rabbit") //== false
+								</p>
+							</div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_21()">Запуск</button>
+							<!--Урок 22-->
+							<h4>Тест 22</h4>
+							<p><a href="https://learn.javascript.ru/string#usechenie-stroki">Создайте функцию truncate</a>(str, maxlength), которая проверяет длину строки str и, если она превосходит maxlength, заменяет конец str на "…", так, чтобы её длина стала равна maxlength. Результатом функции должна быть та же строка, если усечение не требуется, либо, если необходимо, усечённая строка.</p>
+							 <div class="code">
+							 	<p>
+							 		function truncate(str, maxlength) {
+        								<br>&nbsp;&nbsp;let newstr = "";
+        								<br>&nbsp;&nbsp;if (str.length > maxlength) {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;newstr = str.substring(0, maxlength - 1) + '…';
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;return newstr;
+        								<br>&nbsp;&nbsp;} else {
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;newstr = str;
+            								<br>&nbsp;&nbsp;&nbsp;&nbsp;return newstr;
+        								<br>&nbsp;&nbsp;}
+    								<br>}
+								<br>
+    								<br>alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20)) //= "Вот, что мне хотело…"
+								<br>
+    								<br>alert(truncate("Всем привет!", 20)) //= "Всем привет!"
+							 	</p>
+							 </div>
+							<button type="button" class="btn btn-outline-primary" onclick="les_22()">Запуск</button>
+							<button type="button" class="btn btn-outline-primary" onclick="les_23()">Запуск</button>
 						</p>
 					</div>
 				</div>

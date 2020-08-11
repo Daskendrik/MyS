@@ -482,3 +482,49 @@ function les_20() {
     }
     alert(readNumber())
 }
+
+function les_21() {
+    function checkSpam(str) {
+        let a = str.toLowerCase();
+        if (a.includes("viagra") ||  a.includes("xxx")) {
+            alert('true');
+        } else {
+            alert('false');
+        }
+    }
+
+    checkSpam('buy ViAgRA now') //== true
+    checkSpam('free xxxxx') //== true
+    checkSpam("innocent rabbit") //== false
+}
+
+function les_22() {
+    function truncate(str, maxlength) {
+        let newstr = "";
+        if (str.length > maxlength) {
+            newstr = str.substring(0, maxlength - 1) + '…';
+            return newstr;
+        } else {
+            newstr = str;
+            return newstr;
+        }
+    }
+
+    alert(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20)) //= "Вот, что мне хотело…"
+
+    alert(truncate("Всем привет!", 20)) //= "Всем привет!"
+}
+
+function les_23() {
+    function extractCurrencyValue(str) {
+        let newstr = '';
+        for (var i = 0; i <= str.length; i++) {
+            let a = str[i];
+            if (typeof(+str[i]) == 'number') {
+                newstr = newstr + str[i];
+            }
+        }
+        return +newstr;
+    }
+    alert( extractCurrencyValue('$120') === 120 ); // true
+}
