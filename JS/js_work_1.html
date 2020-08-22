@@ -236,7 +236,39 @@
 							 	</p>
 							 </div>
 							<button type="button" class="btn btn-outline-primary" onclick="les_22()">Запуск</button>
+							<!--Урок 23-->
+							<h4>Тест 23</h4>
+							<p><a href="https://learn.javascript.ru/array#summa-vvedyonnyh-chisel">Напишите функцию sumInput()</a>, которая:
+							<br>Просит пользователя ввести значения, используя prompt и сохраняет их в массив.
+							<br>Заканчивает запрашивать значения, когда пользователь введёт не числовое значение, пустую строку или нажмёт «Отмена».
+							<br>Подсчитывает и возвращает сумму элементов массива.
+							<br>P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0»</p>
+							 <div class="code">
+							 	<p>
+							 		function sumInput() {
+								        <br>&nbsp;&nbsp;let arr = [];
+								        <br>&nbsp;&nbsp;let a = true;
+								        <br>&nbsp;&nbsp;let sum = 0;
+										<br>
+								        <br>&nbsp;&nbsp;for (var i = 0; a; i++) {
+								            <br>&nbsp;&nbsp;&nbsp;&nbsp;arr[i] = prompt('Введите число');
+								            <br>
+								            <br>&nbsp;&nbsp;&nbsp;&nbsp;if ((+arr[i] == 0 || isFinite(arr[i]) ) && arr[i] != '' && arr[i] != undefined) {
+								                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sum = sum + +arr[i];
+								            <br>&nbsp;&nbsp;} else {
+								                <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a = false;
+								            <br>&nbsp;&nbsp;&nbsp;&nbsp;}
+								        <br>&nbsp;&nbsp;}
+								        <br>&nbsp;&nbsp;return sum;
+								    <br>}
+								    <br>alert(sumInput());
+							 	</p>
+							 </div>
 							<button type="button" class="btn btn-outline-primary" onclick="les_23()">Запуск</button>
+							<!--Урок 24-->
+							<h4>Тест 24</h4>
+							<p><a href="https://learn.javascript.ru/array#podmassiv-naibolshey-summy">Задача:</a> найти непрерывный подмассив в arr, сумма элементов в котором максимальна. Функция getMaxSubSum(arr) должна возвращать эту сумму. <span style="red">КОНЕЧНО У МЕНЯ ППЦ КАКАЯ ПРОГА ПОЛУЧИЛАСЬ, НО ОНА ПОКРЫВАЕТ НЕ ВСЕ МАССИВЫ :(</span> Программы получилась большая, поэтому проще посмотреть уже в файле main.js. В примерах по ссылке очень интересное решение, впринципе, надо было просто подумать, что если мы ушли в отрицательные значения, то последующая сумма не имеет смысла.</p>
+							<br><button type="button" class="btn btn-outline-primary" onclick="les_24()">Запуск</button>
 						</p>
 					</div>
 				</div>
