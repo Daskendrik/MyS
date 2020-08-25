@@ -520,7 +520,8 @@ function les_23() {
         let newstr = '';
         for (var i = 0; i <= str.length; i++) {
             let a = str[i];
-            if (typeof(+str[i]) == 'number') {
+            let b = typeof(a);
+            if (typeof(a) == 'number') {
                 newstr = newstr + str[i];
             }
         }
