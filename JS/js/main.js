@@ -516,16 +516,86 @@ function les_22() {
 }
 
 function les_23() {
-    function extractCurrencyValue(str) {
-        let newstr = '';
-        for (var i = 0; i <= str.length; i++) {
-            let a = str[i];
-            let b = typeof(a);
-            if (typeof(a) == 'number') {
-                newstr = newstr + str[i];
+    function sumInput() {
+        let arr = [];
+        let a = true;
+        let sum = 0;
+        for (var i = 0; a; i++) {
+            arr[i] = prompt('Введите число');
+            if ((+arr[i] == 0 || isFinite(arr[i]) ) && arr[i] != '' && arr[i] != undefined) {
+                sum = sum + +arr[i];
+            } else {
+                a = false;
             }
         }
-        return +newstr;
+        return sum;
     }
-    alert( extractCurrencyValue('$120') === 120 ); // true
+    alert(sumInput());
+}
+
+function les_24() {
+    function getMaxSubSum(arr) {
+        let sum = 0;
+        let newArr = [];
+        let newarrSum = []
+
+        function checkSum(num) {
+            if (num != undefined) {
+                return true;
+            } else {
+                return false;
+            }
+            
+        }
+        //Созадю многомерный массив 
+        for (var i = 0; i < arr.length; i++) {
+            newArr[i] = [];
+            let newSum = 0;
+            let c = true;
+            for (var b = 0; b < arr.length; b++) {
+
+                if (i <= b) {
+                    newArr[i][b] = arr[b];
+                } else {
+                    newArr[i][b] = 0;
+                }
+                //Решение не подходит, так как мы не знаем, какое следующее число
+                /*if (newSum + newArr[i][b] > newSum && c == true) {
+                    newSum = newSum + newArr[i][b];
+                } else if (newSum + newArr[i][b] < newSum){
+                    c = false;
+                }*/
+            }
+            // Создаем массив сумм
+            for (var b = 0; b < arr.length; b++) {
+                if (newSum + newArr[i][b] > newSum && c == true) {
+                    newSum = newSum + newArr[i][b];
+                } else if (checkSum(newArr[i][b+1]) && newSum + newArr[i][b] + newArr[i][b+1] > newSum && c == true){
+                    newSum = newSum + newArr[i][b];
+                }
+                else if (newSum + newArr[i][b] < newSum){
+                    c = false;
+                }
+            }
+
+            newarrSum[i] = newSum;
+
+        }
+
+        for (var i = 0; i < newarrSum.length; i++) {
+            if (newarrSum[i] > sum) {
+                sum = newarrSum[i];
+            }
+        }
+
+        return sum;
+    }
+   /* alert(getMaxSubSum([-1, 2, 3, -9])) //= 5 (сумма выделенных)
+    alert(getMaxSubSum([2, -1, 2, 3, -9])) //= 6
+    alert(getMaxSubSum([-1, 2, 3, -9, 11])) //= 11
+    alert(getMaxSubSum([-2, -1, 1, 2])) //= 3
+    alert(getMaxSubSum([100, -9, 2, -3, 5]))// = 100
+    alert(getMaxSubSum([1, 2, 3])) //= 6 (берём все)*/
+    alert(getMaxSubSum([-1, 22, 1, -9, -11, -12, 21, -5, 5, 3]))
+
 }
