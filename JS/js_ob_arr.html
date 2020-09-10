@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>JS.Объекты</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+    												<!--скрипт определения метонахождения-->
+    <script type="text/javascript">$(function () {  
+    $('.menu a').each(function () { 
+        var location = window.location.href; 
+        var link = this.href;  
+        if(location == link) { 
+            $(this).addClass('mainmenu_a');
+            $(this).addClass('col');
+            $(this).removeClass('mainmenu_n');
+            $(this).removeClass('col-lg-6');
+        }
+        });
+    });
+    </script>
+</head>
+<body style=" background: #FFEB73">
+	<div class="container" > 
+			<div class="row" style="background: #FFBF00; border: solid;">
+				<div class="col col-12">
+				<h1 style="text-align: center;">Краткий справочник JS</h3>
+				<p style="text-align: right;">Языки/JS/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				</div>
+			</div>
+																					<!--верхние кнопки -->
+			<div class="row" style="background: #FFBF00; border-bottom: dotted; border-right: dotted; border-left: dotted">
+										
+									<div class = "col col-12" style="text-align: center; margin: 1% ">
+									<a href="../index.html"><button class="btn btn-dark">Вернуться на главную страницу</button></a>
+								</div>
+			</div>
+
+		<div class="row " style="min-height: 750px ">
+
+																					<!--Меню -загладка -->
+			<div class="col col-lg-1 menu">
+										<div class="row justify-content-end" style="height: 150px; ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_start.html">
+													<div class="mainmenutext">Введение</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_main.html" >
+												<div class="mainmenutext">Основы</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_fun.html">
+												<div class="mainmenutext">Фнукции</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_ob.html">
+												<div class="mainmenutext">Объект</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_1_table.html">
+												<div class="mainmenutext">Анимация</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_work.html">
+												<div class="mainmenutext">Тренеровка</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_must_know.html">
+												<div class="mainmenutext">Особенности</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_something.html">
+												<div class="mainmenutext">Другое</div>
+											</a>
+										</div>
+			</div>
+																					<!--Меню -загладка -->
+	
+
+			<div class="col col-lg-11" >
+				<div class="row" style="height: 100%; border: ridge;">
+							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid" >
+								<p style="text-align: center;">Тут пока ничего не будет</p>
+							</div>
+							<div  style="background: #FAEEDD;; width: 35px;  position: relative; display: inline-block;">
+									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
+									<img id="block" src="img/arrow-bar-right.svg" alt="" style="width: 100%; display: none;" onclick="(document.getElementById('sec_menu').style.display='block', document.getElementById('hide').style.display='block', document.getElementById('block').style.display='none' )"></img>
+							</div>
+
+																													<!--Начало главного блока-->
+					<div class="col" style="background: #FAEEDD; ">
+						<p>
+							<h1>Массив</h1>
+							<p>Массив это тоже объект, но немного другого типа. Это упорядочная коллекция данных. Объявляется массив двумя способами:</p>
+							<div class="code">
+								<p>
+									let arr = new Array();
+									<br>let arr = [];
+								</p>
+							</div>
+							<p>Например</p>
+							<div class="code">
+								<p>
+									let fruits = ["Яблоко", "Апельсин", "Слива"];
+
+									<br>alert( fruits[0] ); // Яблоко
+									<br>alert( fruits[1] ); // Апельсин показали
+									<br>fruits[2] = 'Груша'; // теперь ["Яблоко", "Апельсин", "Груша"]
+									<br>fruits[3] = 'Лимон'; // теперь ["Яблоко", "Апельсин", "Груша", "Лимон"]
+									<br>alert( fruits.length ); // 4
+									<br>alert( fruits ); // Яблоко, Апельсин, Груша, Лимон
+									<br>let arr = [ 'Яблоко', { name: 'Джон' }, true, function() { alert('привет'); } ];
+								</p>
+							</div>
+							<p>Нумерация начинается с 0. чтобы обратится к необходимому параметру, его порядлковый номер пишем в []. Таким образом, мы можешь заменять, показывать, добавлять. Общее число элементов массива содержится в его свойстве length. Вывести массив целиком можно при помощи alert. В массиве могут храниться элементы любого типа.</p>
+							<h5>Методы</h3>
+							<p>
+								<li>push добавляет элемент в конец (fruits.push("Груша");)</li>
+								<li>pop удаляет последний элемент и возвращает его (alert( fruits.pop() ); // удаляем "Груша" и выводим его)</li>
+								<li>shift удаляет из массива первый элемент и возвращает его (alert( fruits.shift() ); // удаляем Яблоко и выводим его)</li>
+								<li>unshift добавляет элемент в начало массива</li>
+								<li>Методы push и unshift могут добавлять сразу несколько элементов</li>
+							</p>
+							<p>Для перебора всех элементов массива можно использовать следующую конструкцию:</p>
+							<div class="code">
+								<p>
+									let fruits = ["Яблоко", "Апельсин", "Слива"];
+									<br>
+									<br>// проходит по значениям
+									<br>for (let fruit of fruits) {
+									  <br>&nbsp;&nbsp;alert( fruit );
+									<br>}
+								</p>
+							</div>
+							<p>Чтобы удалить все элементы достаточно написать так: arr.length = 0;. Дело в том, что когда мы сокращаем (задаем длинную меньшую существующей), мы безвовратно удаляем все элементы, которые не вошли в диапазон.</p>
+							<h5>Многомерный масив</h5>
+							<p>Это массив, который в себе имеет другие массивы, иначе говоря, это матрица.</p>
+							<div class="code">
+								<p>
+									let matrix = [
+									  <br>&nbsp;&nbsp;[1, 2, 3],
+									  <br>&nbsp;&nbsp;[4, 5, 6],
+									  <br>&nbsp;&nbsp;[7, 8, 9]
+									<br>];
+									<br>
+									<br>alert( matrix[1][1] ); // 5, центральный элемент
+								</p>
+							</div>
+
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class = "col-12" style="background: #FFBF00; border: dotted;">
+			<p style="text-align: center;">ЭТО ДНИЩЕ САЙТА </p>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
