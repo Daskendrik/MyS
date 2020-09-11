@@ -27,7 +27,7 @@
 			<div class="row" style="background: #FFBF00; border: solid;">
 				<div class="col col-12">
 				<h1 style="text-align: center;">Краткий справочник JS</h3>
-				<p style="text-align: right;">Языки/JS/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				<p style="text-align: right;">Языки/JS/Объекты/Массив</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
 				</div>
 			</div>
 																					<!--верхние кнопки -->
@@ -58,7 +58,7 @@
 											</a>
 										</div>
 										<div class="row justify-content-end" style="height: 150px ">
-											<a class="col-lg-6 mainmenu_n rounded-left" href="js_ob.html">
+											<a class="col mainmenu_a rounded-left" href="js_ob.html">
 												<div class="mainmenutext">Объект</div>
 											</a>
 										</div>
@@ -155,7 +155,279 @@
 									<br>alert( matrix[1][1] ); // 5, центральный элемент
 								</p>
 							</div>
-
+							<h5>toString</h5>
+							<p>С помощью toString массив вернет список элементов через запятую, все становится строкой</p>
+							<div class="code">
+								<p>
+									let arr = [1, 2, 3];
+									<br>
+									<br>alert( arr ); // 1,2,3
+									<br>alert( String(arr) === '1,2,3' ); // true
+									<br>alert( [] + 1 ); // "1"
+									<br>alert( [1] + 1 ); // "11"
+									<br>alert( [1,2] + 1 ); // "1,21"
+								</p>
+							</div>
+							<h4>Методы</h4>
+							<h5>Добавление/удаление элементов</h5>
+							<p>Часть этих методов уже выше указаны.</p>
+							<ul>
+								<li><b>spice</b> -  это универсальный «швейцарский нож» для работы с массивами. Умеет всё: добавлять, удалять и заменять элементы. <br>Обычный delete удаляет только значение, spice удалит все. Синтаксис:
+									<div class="code">
+										<p>
+											arr.splice(index[, deleteCount, elem1, ..., elemN])
+										</p>
+									</div>
+									Где 
+									<ul>
+										<li>index - позиция элемента</li>
+										<li>deleteCount - сколько удалит элементов, начиная с позиции index(включая)</li>
+										<li>elem1 - что вставит на то место, где было удалено</li>
+									</ul>
+									<p>Этот метод возвращает  массив из удаленных элементов. Примеры</p>
+									<div class="code">
+										<p>
+											let arr = ["Я", "изучаю", "JavaScript"];
+											<br>
+											<br>arr.splice(1, 1); // начиная с позиции 1, удалить 1 элемент
+											<br>
+											<br>alert( arr ); // осталось ["Я", "JavaScript"]
+											<br>
+											<br>let arr = ["Я", "изучаю", "JavaScript", "прямо", "сейчас"];
+											<br>
+											<br>// удалить 3 первых элемента и заменить их другими
+											<br>arr.splice(0, 3, "Давай", "танцевать");
+											<br>
+											<br>alert( arr ) // теперь ["Давай", "танцевать", "прямо", "сейчас"]
+											<br>
+											<br>let arr = ["Я", "изучаю", "JavaScript", "прямо", "сейчас"];
+											<br>
+											<br>// удалить 2 первых элемента
+											<br>let removed = arr.splice(0, 2);
+											<br>
+											<br>alert( removed ); // "Я", "изучаю" <-- массив из удалённых элементов
+										</p>					
+									</div>
+									<p>Так же, если deleteCount равно 0, то мы просто вставляем новые элементу между существующими, что очень удобно.</p>
+								</li>
+								<li><b>slice</b> - намного проще, чем похожий на него arr.splice. Синтаксис:
+									<div class="code">
+										<p>
+											arr.slice([start], [end])
+										</p>
+									</div>
+									Он возвращает массив, начиная с индекса start и до end (не включая end). arr.slice() создаёт копию массива arr. Это часто используют, чтобы создать копию массива для дальнейших преобразований, которые не должны менять исходный массив.
+								</li>
+								<li><b>concat</b> - оздаёт новый массив, в который копирует данные из других массивов и дополнительные значения. Синтаксис:
+									<div class="code">
+										<p>
+											arr.concat(arg1, arg2...)
+										</p>
+									</div>
+									Он принимает любое количество аргументов, которые могут быть как массивами, так и простыми значениями. Пример:
+									<div class="code">
+										<p>
+											let arr = [1, 2];
+											<br>
+											<br>// создать массив из: arr и [3,4]
+											<br>alert( arr.concat([3, 4]) ); // 1,2,3,4
+											<br>
+											<br>// создать массив из: arr и [3,4] и [5,6]
+											<br>alert( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
+											<br>
+											<br>// создать массив из: arr и [3,4], потом добавить значения 5 и 6
+											<br>alert( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
+										</p>
+									</div>
+									Допустим мы хотим вставить тут объект. Тут есть пару ньюансов. Если мы попробуем просто вставить объект:
+									<div class="code">
+										<p>
+											let arr = [1, 2];
+											<br>
+											<br>let arrayLike = {
+											  <br>&nbsp;&nbsp;0: "что-то",
+											  <br>&nbsp;&nbsp;length: 1
+											<br>};
+											<br>
+											<br>alert( arr.concat(arrayLike) ); // 1,2,[object Object]
+										</p>
+									</div>
+									<p>Для нормальной вставки в объекте необходимо прописать [Symbol.isConcatSpreadable]: true,  length: 2, то есть вот так:</p>
+									<div class="code">
+										<p>
+											let arr = [1, 2];
+											<br>
+											<br>let arrayLike = {
+											  <br>&nbsp;&nbsp;0: "что-то",
+											  <br>&nbsp;&nbsp;1: "ещё",
+											  <br>&nbsp;&nbsp;[Symbol.isConcatSpreadable]: true,
+											  <br>&nbsp;&nbsp;length: 2
+											<br>};
+											<br>
+											<br>alert( arr.concat(arrayLike) ); // 1,2,что-то,ещё
+										</p>				
+									</div>
+								</li>	
+								<li><b>Перебор: forEach</b>
+									<p>Метод arr.forEach позволяет запускать функцию для каждого элемента массива. Синтаксис:</p>
+									<div class="code">
+										<p>
+											arr.forEach(function(item, index, array) {
+											<br>  // ... делать что-то с item
+											<br>});
+										</p>
+									</div>
+									<p>Напрмиер выведем каждое значение или значение и его место в массиве:</p>
+									<div class="code">
+										<p>
+											// Вызов alert для каждого элемента
+											<br>["Bilbo", "Gandalf", "Nazgul"].forEach(alert);
+											<br>
+											<br>["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+											  <br>>&nbsp;&nbsp;alert(`${item} имеет позицию ${index} в ${array}`);
+											<br>});
+										</p>		
+									</div>
+								</li>
+								<li><b>Поиск в массиве</b>
+									<ul>
+										<li><b>indexOf/lastIndexOf и includes</b>
+											<p>Методы arr.indexOf, arr.lastIndexOf и arr.includes имеют одинаковый синтаксис и делают по сути то же самое, что и их строковые аналоги, но работают с элементами вместо символов:</p>
+											<ul>
+												<li>arr.indexOf(item, from) ищет item, начиная с индекса from, и возвращает индекс, на котором был найден искомый элемент, в противном случае -1.</li>
+												<li>arr.lastIndexOf(item, from) – то же самое, но ищет справа налево.</li>
+												<li>arr.includes(item, from) – ищет item, начиная с индекса from, и возвращает true, если поиск успешен.</li>
+											</ul>
+											<p>Пример:</p>
+											<div class="code">
+												<p>
+													let arr = [1, 0, false];
+													<br>
+													<br>alert( arr.indexOf(0) ); // 1
+													<br>alert( arr.indexOf(false) ); // 2
+													<br>alert( arr.indexOf(null) ); // -1
+													<br>
+													<br>alert( arr.includes(1) ); // true
+												</p>
+											</div>
+										</li>
+										<li><b>find и findIndex</b>
+											<p>Используется при работе с массивом объектов. Синтаксис следующий:</p>
+											<div class="code">
+												<p>
+													let result = arr.find(function(item, index, array) {
+													  <br>// если true - возвращается текущий элемент и перебор прерывается
+													  <br>// если все итерации оказались ложными, возвращается undefined
+													<br>});
+												</p>		
+											</div>
+											<ul>
+												<li>item – очередной элемент.</li>
+												<li>index – его индекс.</li>
+												<li>array – сам массив.</li>
+											</ul>
+											<p>Пример:</p>
+											<div class="code">
+												<p>
+													<br>let users = [
+													  <br>&nbsp;&nbsp;{id: 1, name: "Вася"},
+													  <br>&nbsp;&nbsp;{id: 2, name: "Петя"},
+													  <br>&nbsp;&nbsp;{id: 3, name: "Маша"}
+													<br>];
+													<br>
+													<br>let user = users.find(item => item.id == 1);
+													<br>
+													<br>alert(user.name); // Вася
+												</p>	
+											</div>
+											<p> arr.findIndex – по сути, то же самое, но возвращает индекс, на котором был найден элемент, а не сам элемент, и -1, если ничего не найдено.</p>
+										</li>
+										<li><b>filter</b>
+											<p>find ищет один (первый попавшийся) элемент, на котором функция-колбэк вернёт true. На тот случай, если найденных элементов может быть много, предусмотрен метод <b>arr.filter(fn)</b>.</p>
+											<div class="code">
+												<p>
+													let result = arr.filter(function(item, index, array) {
+													  <br>// если true - возвращается текущий элемент и перебор прерывается
+													  <br>// если все итерации оказались ложными, возвращается undefined
+													<br>});
+												</p>		
+											</div>
+											<p>Пример</p>
+											<div class="code">
+												<p>
+													<br>let users = [
+													  <br>&nbsp;&nbsp;{id: 1, name: "Вася"},
+													  <br>&nbsp;&nbsp;{id: 2, name: "Петя"},
+													  <br>&nbsp;&nbsp;{id: 3, name: "Маша"}
+													<br>;
+													<br>
+													<br>// возвращает массив, состоящий из двух первых пользователей
+													<br>let someUsers = users.filter(item => item.id < 3);
+													<br>
+													<br>alert(someUsers.length); // 2
+												</p>	
+											</div>
+										</li>
+									</ul>
+								</li>	
+								<li><b>Преобразование массива</b>
+									<ul>
+										<li><b>map</b>
+											<p>Метод arr.map является одним из наиболее полезных и часто используемых. Он вызывает функцию для каждого элемента массива и возвращает массив результатов выполнения этой функции.</p>
+											<div class="code">
+												<p>
+													<br>let result = arr.map(function(item, index, array) {
+													 <br> // возвращается новое значение вместо элемента
+													<br>});
+												</p>
+											</div>
+											<p>Пример:</p>
+											<div class="code">
+												<p>
+													let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+													<br>alert(lengths); // 5,7,6
+												</p>		
+											</div>
+										</li>
+										<li><b>sort(fn)</b>
+											<p>Вызов arr.sort() сортирует массив на месте, меняя в нём порядок элементов. Он возвращает отсортированный массив, но обычно возвращаемое значение игнорируется, так как изменяется сам arr. <b>По умолчанию элементы сортируются как строки.</b></p>
+											<p>Пример:</p>
+											<div class="code">
+												<p>
+													let arr = [ 1, 2, 15 ];
+													<br>
+													<br>// метод сортирует содержимое arr
+													<br>arr.sort();
+													<br>
+													<br>alert( arr );  // 1, 15, 2
+												</p>	
+											</div>
+											<p>Чтобы использовать наш собственный порядок сортировки, нам нужно предоставить функцию в качестве аргумента arr.sort().</p>
+											<div class="code">
+												<p>
+													function compare(a, b) {
+													  <br>&nbsp;&nbsp;if (a > b) return 1; // если первое значение больше второго
+													  <br>&nbsp;&nbsp;if (a == b) return 0; // если равны
+													  <br>&nbsp;&nbsp;if (a < b) return -1; // если первое значение меньше второго
+													<br>}
+													<br>
+													<br>let arr = [ 1, 2, 15 ];
+													<br>
+													<br>arr.sort(compareNumeric);
+													<br>
+													<br>alert(arr);  // 1, 2, 15
+													<br>//ИЛИ
+													<br>let arr = [ 1, 2, 15 ];
+													<br>
+													<br>arr.sort(function(a, b) { return a - b; });
+													<br>
+													<br>alert(arr);  // 1, 2, 15
+												</p>
+											</div>
+										</li>
+									</ul>
+								</li>							
+							</ul>
 						</p>
 					</div>
 				</div>
