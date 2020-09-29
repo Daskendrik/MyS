@@ -425,6 +425,41 @@
 												</p>
 											</div>
 										</li>
+										<li><b>reverse</b>
+											<p>Метод arr.reverse меняет порядок элементов в arr на обратный.</p>
+										</li>
+										<li><b>split и join</b>
+											<p>str.split(delim) - разбивает строку на массив по задонному разделителю delim. У метода split есть необязательный второй числовой аргумент – ограничение на количество элементов в массиве. Вызов split(s) с пустым аргументом s разбил бы строку на массив букв <br>Вызов arr.join(glue) делает в точности противоположное split. Он создаёт строку из элементов arr, вставляя glue между ними. Пример</p>
+											<div class="code">
+												<p>
+													let a ="Марк, Рон, Шерлок, Гуф, Митяй";
+												    <br>let b = a.split(', ');
+												    <br>let c = b.join('; ');
+												    <br>alert('Маасив' + ' ' + b);
+												    <br>lert('Строчки' + ' ' + c);
+												</p>
+											</div>
+											<button type="button" class="btn btn-outline-primary" onclick="arr_split_join()">Запуск</button>
+										</li>
+										<li><b>reduce/reduceRight</b>
+											<p>Они используются для вычисления какого-нибудь единого значения на основе всего массива.</p>
+											<div class="code">
+												<p>
+													let value = arr.reduce(function(previousValue, item, index, array) {
+													<br>  // ...
+													<br>}, [initial]);
+												</p>
+											</div>
+											<p>Функция применяется по очереди ко всем элементам массива и «переносит» свой результат на следующий вызов. Аргументы:</p>
+											<ul>
+												<li>previousValue – результат предыдущего вызова этой функции, равен initial при первом вызове (если передан initial)</li>
+												<li>item – очередной элемент массива,</li>
+												<li>index – его индекс,</li>
+												<li>array – сам массив.</li>
+											</ul>
+										</li>
+										<p>Подробнее <a href="https://learn.javascript.ru/array-methods#reduce-reduceright">тут</a></p>
+										<p>Дальше пауза. Тут и остановлюсь.</p>		
 									</ul>
 								</li>							
 							</ul>
