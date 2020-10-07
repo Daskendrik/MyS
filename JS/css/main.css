@@ -1,3 +1,7 @@
+h4 {
+	text-align: center;
+}
+
 .mainmenu_n{
 	background: #FFDC73;  
 	margin: 3% 0% 3% 3%;
@@ -47,7 +51,6 @@
 
 .nextflore {
 	text-indent: 30px;
-
 }
 
 .maintext{
@@ -66,3 +69,4 @@
 	background: white;
 	text-align: center;
 }
+
