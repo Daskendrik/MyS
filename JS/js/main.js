@@ -132,6 +132,14 @@ function copy_ob_1() {
     alert('Второй объект:' + ' ' + clone.name + ' ' + clone.age);
 }
 
+function arr_split_join() {
+    let a ="Марк, Рон, Шерлок, Гуф, Митяй";
+    let b = a.split(', ');
+    let c = b.join('; ');
+    alert('Маасив' + ' ' + b);
+    alert('Строчки' + ' ' + c);
+}
+
 
 
 
