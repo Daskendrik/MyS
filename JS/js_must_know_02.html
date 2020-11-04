@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>JS.Коротко о главном</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css"> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    												<!--скрипт определения метонахождения-->
+    <script type="text/javascript">$(function () {  
+    $('.menu a').each(function () { 
+        var location = window.location.href; 
+        var link = this.href;  
+        if(location == link) { 
+            $(this).addClass('mainmenu_a');
+            $(this).addClass('col');
+            $(this).removeClass('mainmenu_n');
+            $(this).removeClass('col-lg-6');
+        }
+        });
+    });
+    </script>
+</head>
+<body style=" background: #FFEB73">
+	<div class="container" > 
+			<div class="row" style="background: #FFBF00; border: solid;">
+				<div class="col col-12">
+				<h1 style="text-align: center;">Краткий справочник JS</h3>
+				<p style="text-align: right;">Языки/JS/Введение</p> <!--https://bootstrap-4.ru/docs/4.4/components/breadcrumb/-->
+				</div>
+			</div>
+																					<!--верхние кнопки -->
+			<div class="row" style="background: #FFBF00; border-bottom: dotted; border-right: dotted; border-left: dotted">
+										
+									<div class = "col col-12" style="text-align: center; margin: 1% ">
+									<a href="../index.html"><button class="btn btn-dark">Вернуться на главную страницу</button></a>
+								</div>
+			</div>
+
+		<div class="row " style="min-height: 750px ">
+
+																					<!--Меню -загладка -->
+			<div class="col col-lg-1 menu">
+										<div class="row justify-content-end" style="height: 150px; ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_start.html">
+													<div class="mainmenutext">Введение</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_main.html" >
+												<div class="mainmenutext">Основы</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_fun.html">
+												<div class="mainmenutext">Фнукции</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_ob.html">
+												<div class="mainmenutext">Объект</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 150px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="sql_1_table.html">
+												<div class="mainmenutext">Анимация</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_work.html">
+												<div class="mainmenutext">Тренеровка</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_must_know.html">
+												<div class="mainmenutext">Особенности</div>
+											</a>
+										</div>
+										<div class="row justify-content-end" style="height: 170px ">
+											<a class="col-lg-6 mainmenu_n rounded-left" href="js_something.html">
+												<div class="mainmenutext">Другое</div>
+											</a>
+										</div>
+			</div>
+																					<!--Меню -загладка -->
+	
+
+			<div class="col col-lg-11" >
+				<div class="row" style="height: 100%; border: ridge;">
+							<div id="sec_menu" class="col col-3" style="background: #FAEEDD; border-right: 1px solid" >
+								<p style="text-align: center;">Тут пока ничего не будет</p>
+							</div>
+							<div  style="background: #FAEEDD;; width: 35px;  position: relative; display: inline-block;">
+									<img id="hide" src="img/arrow-bar-left.svg" alt="" style="width: 100%;" onclick="(document.getElementById('sec_menu').style.display='none', document.getElementById('hide').style.display='none', document.getElementById('block').style.display='block' )"></img>
+									<img id="block" src="img/arrow-bar-right.svg" alt="" style="width: 100%; display: none;" onclick="(document.getElementById('sec_menu').style.display='block', document.getElementById('hide').style.display='block', document.getElementById('block').style.display='none' )"></img>
+							</div>
+
+																													<!--Начало главного блока-->
+					<div class="col" style="background: #FAEEDD; ">
+					<h2>То, что стоит запомнить</h2>
+					<p>
+						Тут я хочу написать то, что стоит помнить и повторять.
+						<ol>
+							<li> 
+								<h3>Функции смешанные</h3>
+								<ul>
+									<li><b>print a</b> или <b>print(a)</b> - вернет тип данных</li>
+								</ul>
+							</li>
+							<li>
+								<h3>Базовые операции</h3>
+								<ul>
+									<li>Str <b>+</b> str = str ('a' + 'b' = 'ab')</li>
+									<li>Str <b>+</b> nub = str ('1' + 2 = '12')</li>
+									<li>Num <b>+</b> num = num (1 + 2 = 3)</li>
+									<li>Bool <b>+</b> num = num (true + 1 = 2)</li>
+									<li>Bool <b>+</b> str = str (true + 'a' = truea)</li>
+									<li>Num <b>-</b> num = num (2 - 1 = 1)</li>
+									<li>Num <b>*</b> num = num (2 * 1 = 2)</li>
+									<li>Num <b>/</b> num = num (2 / 1 = 2)</li>
+								</ul>
+							</li>
+						</ol>
+					</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class = "col-12" style="background: #FFBF00; border: dotted;">
+			<p style="text-align: center;">ЭТО ДНИЩЕ САЙТА </p>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
