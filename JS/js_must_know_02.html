@@ -217,6 +217,22 @@
 									<li><b>this</b> - как бы заменяет имя объекта в данном объекте, можно использовать в методе объекта </li>
 								</ul>
 							</li>
+							<li>
+								<h3>DOM</h3>
+								<ul>
+									<li>DOM - это по сути код страницы</li>
+									<li><b>document.</b> - самый глобальный объект, имеет свои методы</li>
+									<li>старый метод let a =  <b>document.getElementByID('id')</b> - получаем доступ к определенному объекту по ID(единственный уникальный)</li>
+									<li>старый метод let a =  <b>document.getElementsByClassName('class')</b> - получаем доступ к определенному объекту по классу(дублируется бес-но)</li>
+									<li>старый метод let a =  <b>document.getElementsByTagName('tag')</b> - получаем доступ к определенному объекту по тегу</li>
+									<li>let a = <b>document.querySelector('#ID')</b> - получаем доступ к определенному объекту по ID. Возвращает только 1 запись </li>
+									<li>let a = <b>document.querySelectorAll('.class')</b> - получаем доступ к определенному объекту по классу. Возвращает все записи</li>
+									<li>let a = <b>document.querySelector('tag')</b> - получаем доступ к определенному объекту по тегу</li>
+									<li>let a = document.querySelector(<b>'div#D5 > ul'</b>) - получаем доступ дочкам</li>
+									<li>a.<b>innerHTML</b> -получаем доступ к html содержимому, можем менять</li>
+									<li>a.<b>textContent</b> - получаем содежржимое, без  html, можем менять</li>
+								</ul>
+							</li>
 						</ol>
 					</p>
 					</div>
