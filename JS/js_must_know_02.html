@@ -163,8 +163,10 @@
 								<ul>
 									<li>function nameOwn(параметр) {действие}  - такое создание функции видно по всему файлу</li>
 									<li>var/let Name = function(параметр) {действие} - такое создание функции видно только после ее определения</li>
+									<li>при вызове методов надо писать в конце (), кроме вызова в addEventListener</li>
 									<li><b>print a</b> или <b>print(a)</b> - вернет тип данных</li>
 									<li><b>console.log()</b> - выводит () в консоль</li>
+									<li><b>Замыкание</b> - созание объекта (или функции) через функцию </li>
 								</ul>
 							</li>
 							<li>
@@ -212,6 +214,7 @@
 									<li>str.split('сепаратор') - получаем из строки массив, где сепаратор - то, что разделяет символы в строке</li>
 									<li>arr.join('сепаратор') - получаем из массива строку, где сепаратор - то, что будет разделять символы в строке</li>
 									<li>arr.reverse()- обратный порядок массива</li>
+									<li>arr.forEach(function(key){}) - будет выполнять действие для каждого ключа</li>
 									<li>arr.splice(index of start, count of delete, item for add) - удаляет, добавляет</li>
 									<li>arr.concat([newarr]) - обединит arr c newarr и вернет новый массив</li>
 									<li>arr.find(function(i){}) - функция будет принимать каждый элемент массива(эелемент = i)</li>
@@ -224,11 +227,20 @@
 								<h3>Объект</h3>
 								<ul>
 									<li>var someObject = {key: 'string', key1: number, key2: {object}, key3: function(){}} - объявление объекта</li>
+									<li>function Car () {} - создание класса/прототипа для объекта, всегда с <b>большой буквы</b></li>
+									<li>var someOb = <b>new</b> Car() - создаем объект через функцию</li>
+									<li>car.prototypw.getAge = function() {} - добавляем метод в прототип объекта</li>
+									<li>Сначала смотрятся значения в объекте, потом в прототипе</li>
 									<li><b>someObject.key</b> - вернет значение ключа</li>
 									<li><b>someObject.['key']</b> - вернет значение ключа</li>
 									<li>someObject.key1 = number2 - заменяет значение </li>
 									<li>arr.push('value') - добавляет новый элемент в конец массива со значением  value</li>
 									<li><b>this</b> - как бы заменяет имя объекта в данном объекте, можно использовать в методе объекта </li>
+									<li>var Ob = Object.create({} (первы параметр это прототип объекта), {name: {value: "Dasha", enumerable: true}, age: {value: "26"}} (описывает св-ва объекта Ob))</li>
+									<li>При создании объекта через Object все свойста будут недоступны для редактирования, удаления!</li>
+									<li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors">свойства</a> полей объекта, типа name чуть выше </li>
+									<li>получение доступа до всех ключей(+ св-во прототипа) - for(var key in arr){}</li>
+									<li>получение доступа до всех ключей(не идет по прототипу) - Object.keys(arr) - создает массив из ключей объекта</li>
 								</ul>
 							</li>
 							<li>
